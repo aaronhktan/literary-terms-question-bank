@@ -2,14 +2,7 @@
  * on 17 NovemberTo change this license header, choose License Headers in Project Properties.
  * on 17 NovemberTo change this template file, choose Tools | Templates
  * on 17 Novemberand open the template in the editor.
- */ as to show some squares
-to show some squares
-to show some squares
-to show some squares
-to show some squares
-to show some squares
-to show some squares
-to show some squares
+ */
 
 package literarytermsquestionbank;
 
@@ -33,40 +26,197 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        secondaryPanel = new javax.swing.JPanel();
+        tabbedPane = new javax.swing.JTabbedPane();
+        answerTabPanel = new javax.swing.JPanel();
+        questionLabel = new javax.swing.JLabel();
+        answerTextField = new javax.swing.JTextField();
+        checkButton = new javax.swing.JButton();
+        imageButton = new javax.swing.JLabel();
+        clueTabPanel = new javax.swing.JPanel();
+        clueTitleLabel = new javax.swing.JLabel();
+        clueLabel = new javax.swing.JLabel();
+        commentsTabPanel = new javax.swing.JPanel();
+        commentsLabel = new javax.swing.JLabel();
+        exampleTabPanel = new javax.swing.JPanel();
+        examplesLabel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
+        passageLabel = new javax.swing.JLabel();
+        backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 1130, 822));
+        setForeground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(1140, 790));
+        setPreferredSize(new java.awt.Dimension(1130, 790));
+        getContentPane().setLayout(null);
 
-        mainPanel.setToolTipText("");
-        mainPanel.setName("mainPanel"); // NOI18N
+        secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
+        secondaryPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 499, Short.MAX_VALUE)
-        );
+        tabbedPane.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        tabbedPane.setName("Answer"); // NOI18N
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        answerTabPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        questionLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        questionLabel.setText("What literary device is this?");
+
+        checkButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
+        checkButton.setText("Check answer");
+
+        imageButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/literarytermsquestionbank/quill.png"))); // NOI18N
+
+        javax.swing.GroupLayout answerTabPanelLayout = new javax.swing.GroupLayout(answerTabPanel);
+        answerTabPanel.setLayout(answerTabPanelLayout);
+        answerTabPanelLayout.setHorizontalGroup(
+            answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(answerTabPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(questionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imageButton))
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        answerTabPanelLayout.setVerticalGroup(
+            answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(answerTabPanelLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(imageButton)
+                .addGap(117, 117, 117))
         );
+
+        imageButton.getAccessibleContext().setAccessibleDescription("");
+
+        tabbedPane.addTab("Answer", answerTabPanel);
+
+        clueTabPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        clueTitleLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        clueTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clueTitleLabel.setText("Clue:");
+
+        clueLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
+        clueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clueLabel.setText("<html>Your clue will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.</html>");
+        clueLabel.setToolTipText("");
+
+        javax.swing.GroupLayout clueTabPanelLayout = new javax.swing.GroupLayout(clueTabPanel);
+        clueTabPanel.setLayout(clueTabPanelLayout);
+        clueTabPanelLayout.setHorizontalGroup(
+            clueTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(clueTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clueTabPanelLayout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+        clueTabPanelLayout.setVerticalGroup(
+            clueTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clueTabPanelLayout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(clueTitleLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
+
+        tabbedPane.addTab("Clue", clueTabPanel);
+
+        commentsTabPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        commentsLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
+        commentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        commentsLabel.setText("<html>Comments will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin. Filet mignon jowl turducken flank landjaeger andouille biltong, venison rump burgdoggen prosciutto pastrami shoulder. Pancetta frankfurter ham strip steak, brisket tenderloin spare ribs alcatra beef ribs chuck. Hamburger pancetta pig bacon. Beef ribs shank picanha ball tip t-bone biltong shoulder pork chop.<html>");
+        commentsLabel.setToolTipText("");
+
+        javax.swing.GroupLayout commentsTabPanelLayout = new javax.swing.GroupLayout(commentsTabPanel);
+        commentsTabPanel.setLayout(commentsTabPanelLayout);
+        commentsTabPanelLayout.setHorizontalGroup(
+            commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(commentsTabPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        commentsTabPanelLayout.setVerticalGroup(
+            commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commentsTabPanelLayout.createSequentialGroup()
+                .addContainerGap(85, Short.MAX_VALUE)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+        );
+
+        tabbedPane.addTab("More Info", commentsTabPanel);
+
+        exampleTabPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        examplesLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
+        examplesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        examplesLabel.setText("<html>More examples will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin. Filet mignon jowl turducken flank landjaeger andouille biltong, venison rump burgdoggen prosciutto pastrami shoulder. Pancetta frankfurter ham strip steak, brisket tenderloin spare ribs alcatra beef ribs chuck. Hamburger pancetta pig bacon. Beef ribs shank picanha ball tip t-bone biltong shoulder pork chop.</html>");
+        examplesLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        javax.swing.GroupLayout exampleTabPanelLayout = new javax.swing.GroupLayout(exampleTabPanel);
+        exampleTabPanel.setLayout(exampleTabPanelLayout);
+        exampleTabPanelLayout.setHorizontalGroup(
+            exampleTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exampleTabPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        exampleTabPanelLayout.setVerticalGroup(
+            exampleTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exampleTabPanelLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
+        tabbedPane.addTab("More examples", exampleTabPanel);
+
+        javax.swing.GroupLayout secondaryPanelLayout = new javax.swing.GroupLayout(secondaryPanel);
+        secondaryPanel.setLayout(secondaryPanelLayout);
+        secondaryPanelLayout.setHorizontalGroup(
+            secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+        secondaryPanelLayout.setVerticalGroup(
+            secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        tabbedPane.getAccessibleContext().setAccessibleName("");
+
+        getContentPane().add(secondaryPanel);
+        secondaryPanel.setBounds(808, 0, 322, 750);
+
+        mainPanel.setBackground(new java.awt.Color(251, 235, 204));
+        mainPanel.setLayout(null);
+
+        passageLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        passageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        passageLabel.setText("<html>The passage will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.<html>");
+        passageLabel.setToolTipText("");
+        mainPanel.add(passageLabel);
+        passageLabel.setBounds(220, 130, 332, 484);
+
+        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/literarytermsquestionbank/Scroll_v2.png"))); // NOI18N
+        mainPanel.add(backgroundLabel);
+        backgroundLabel.setBounds(137, 0, 506, 751);
+
+        getContentPane().add(mainPanel);
+        mainPanel.setBounds(0, 0, 1130, 822);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,7 +257,23 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel answerTabPanel;
+    private javax.swing.JTextField answerTextField;
+    private javax.swing.JLabel backgroundLabel;
+    private javax.swing.JButton checkButton;
+    private javax.swing.JLabel clueLabel;
+    private javax.swing.JPanel clueTabPanel;
+    private javax.swing.JLabel clueTitleLabel;
+    private javax.swing.JLabel commentsLabel;
+    private javax.swing.JPanel commentsTabPanel;
+    private javax.swing.JPanel exampleTabPanel;
+    private javax.swing.JLabel examplesLabel;
+    private javax.swing.JLabel imageButton;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel passageLabel;
+    private javax.swing.JLabel questionLabel;
+    private javax.swing.JPanel secondaryPanel;
+    private javax.swing.JTabbedPane tabbedPane;
     // End of variables declaration//GEN-END:variables
 
 }

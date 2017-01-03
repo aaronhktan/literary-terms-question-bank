@@ -2,7 +2,7 @@
  * on 17 NovemberTo change this license header, choose License Headers in Project Properties.
  * on 17 NovemberTo change this template file, choose Tools | Templates
  * on 17 Novemberand open the template in the editor.
- */ as to show some squares
+ */
 
 package literarytermsquestionbank;
 

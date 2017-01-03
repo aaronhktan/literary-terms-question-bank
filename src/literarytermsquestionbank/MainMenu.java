@@ -1,7 +1,6 @@
 /* Created by A. Tan
- * on 17 NovemberTo change this license header, choose License Headers in Project Properties.
- * on 17 NovemberTo change this template file, choose Tools | Templates
- * on 17 Novemberand open the template in the editor.
+ * on 2 January
+ * as the main menu for the literary terms practice bank
  */
 
 package literarytermsquestionbank;
@@ -49,6 +48,9 @@ public class MainMenu extends javax.swing.JFrame {
         mainPanel.setLayout(null);
 
         shortStoriesLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                shortStoriesLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 shortStoriesLabelMouseEntered(evt);
             }
@@ -57,6 +59,9 @@ public class MainMenu extends javax.swing.JFrame {
         shortStoriesLabel.setBounds(60, 20, 160, 580);
 
         RomeoAndJulietLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RomeoAndJulietLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 RomeoAndJulietLabelMouseEntered(evt);
             }
@@ -65,6 +70,9 @@ public class MainMenu extends javax.swing.JFrame {
         RomeoAndJulietLabel.setBounds(220, 130, 130, 470);
 
         ChristmasCarolLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ChristmasCarolLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ChristmasCarolLabelMouseEntered(evt);
             }
@@ -123,7 +131,9 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // These methods make the mouse cursor turn into a hand when the mouse is over the books
     private void ChristmasCarolLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChristmasCarolLabelMouseEntered
+        // For example, this method sets the cursor to a hand when the mouse is hovering over A Christmas Carol
         ChristmasCarolLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_ChristmasCarolLabelMouseEntered
 
@@ -142,6 +152,22 @@ public class MainMenu extends javax.swing.JFrame {
     private void helpLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpLabelMouseEntered
         helpLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_helpLabelMouseEntered
+    
+    // These methods hide the main menu and open the correct frame for the selection
+    private void shortStoriesLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shortStoriesLabelMouseClicked
+        this.setVisible(false); // Hides the main menu
+        new ShortStories().setVisible(true); // Shows the short stories frame
+    }//GEN-LAST:event_shortStoriesLabelMouseClicked
+
+    private void RomeoAndJulietLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RomeoAndJulietLabelMouseClicked
+        this.setVisible(false);
+        new RomeoAndJuliet().setVisible(true);
+    }//GEN-LAST:event_RomeoAndJulietLabelMouseClicked
+
+    private void ChristmasCarolLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChristmasCarolLabelMouseClicked
+        this.setVisible(false);
+        new AChristmasCarol().setVisible(true);
+    }//GEN-LAST:event_ChristmasCarolLabelMouseClicked
 
     /**
      * @param args the command line arguments
