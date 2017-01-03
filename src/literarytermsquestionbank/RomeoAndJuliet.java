@@ -49,7 +49,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 1130, 822));
         setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1140, 790));
-        setPreferredSize(new java.awt.Dimension(1130, 790));
+        setPreferredSize(new java.awt.Dimension(1140, 790));
         getContentPane().setLayout(null);
 
         secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -67,7 +67,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         checkButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
         checkButton.setText("Check answer");
 
-        imageButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/literarytermsquestionbank/quill.png"))); // NOI18N
+        imageButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/quill.png"))); // NOI18N
 
         javax.swing.GroupLayout answerTabPanelLayout = new javax.swing.GroupLayout(answerTabPanel);
         answerTabPanel.setLayout(answerTabPanelLayout);
@@ -193,7 +193,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         );
         secondaryPanelLayout.setVerticalGroup(
             secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
         );
 
         tabbedPane.getAccessibleContext().setAccessibleName("");
@@ -211,7 +211,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         mainPanel.add(passageLabel);
         passageLabel.setBounds(220, 130, 332, 484);
 
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/literarytermsquestionbank/Scroll_v2.png"))); // NOI18N
+        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Scroll_v2.png"))); // NOI18N
         mainPanel.add(backgroundLabel);
         backgroundLabel.setBounds(137, 0, 506, 751);
 

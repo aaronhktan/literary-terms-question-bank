@@ -111,7 +111,7 @@ public class MainMenu extends javax.swing.JFrame {
         mainPanel.add(titleLabel);
         titleLabel.setBounds(40, 610, 940, 80);
 
-        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/literarytermsquestionbank/BookShelf_w_Titles_v2.png"))); // NOI18N
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/BookShelf_w_Titles_v2.png"))); // NOI18N
         mainPanel.add(backgroundImage);
         backgroundImage.setBounds(30, 20, 990, 800);
 

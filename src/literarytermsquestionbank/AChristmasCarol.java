@@ -26,46 +26,228 @@ public class AChristmasCarol extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        mainPanel = new javax.swing.JPanel();
+        salutationLabel = new javax.swing.JLabel();
+        passageLabel = new javax.swing.JLabel();
+        signatureLabel = new javax.swing.JLabel();
+        tree400Label = new javax.swing.JLabel();
+        tree300Label = new javax.swing.JLabel();
+        tree300Label1 = new javax.swing.JLabel();
+        tree200Label = new javax.swing.JLabel();
+        envelopeLabel = new javax.swing.JLabel();
+        tree150Label = new javax.swing.JLabel();
+        skyPanel = new javax.swing.JPanel();
+        tabbedPane = new javax.swing.JTabbedPane();
+        answerTabPane = new javax.swing.JPanel();
+        questionLabel = new javax.swing.JLabel();
+        answerTextField = new javax.swing.JTextField();
+        checkButton = new javax.swing.JButton();
+        clueTabPane = new javax.swing.JPanel();
+        clueTitleLabel = new javax.swing.JLabel();
+        clueLabel = new javax.swing.JLabel();
+        commentsTabPane = new javax.swing.JPanel();
+        commentsLabel = new javax.swing.JLabel();
+        exampleTabPane = new javax.swing.JPanel();
+        exampleLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1140, 790));
+        setPreferredSize(new java.awt.Dimension(1140, 790));
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        mainPanel.setBackground(new java.awt.Color(199, 255, 255));
+        mainPanel.setLayout(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(199, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(147, 147, 147))
+        salutationLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
+        salutationLabel.setText("Dear Santa,");
+        mainPanel.add(salutationLabel);
+        salutationLabel.setBounds(380, 250, 120, 30);
+
+        passageLabel.setFont(new java.awt.Font("Freestyle Script", 0, 24)); // NOI18N
+        passageLabel.setText("<html>Bacon ipsum dolor amet meatball bresaola shank drumstick, corned beef doner pork loin ball tip pork chop capicola filet mignon. Ground round swine t-bone andouille. Spare ribs bacon ribeye turducken corned beef shoulder rump. Shoulder shankle short loin kielbasa strip steak ball tip. Fatback meatball bacon biltong pastrami landjaeger.  Fatback jerky chicken, meatball chuck corned beef sirloin pancetta turkey pork cow picanha. Strip steak venison pork pastrami cupim chicken sausage capicola burgdoggen tri-tip. Cupim pork belly porchetta boudin capicola. Pork chop ham pork loin tail capicola, shankle short ribs bacon shoulder frankfurter pig meatball meatloaf.</html>");
+        mainPanel.add(passageLabel);
+        passageLabel.setBounds(400, 300, 400, 320);
+
+        signatureLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
+        signatureLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        signatureLabel.setText("<html>Love,<br>Scrooge</html>");
+        signatureLabel.setToolTipText("");
+        mainPanel.add(signatureLabel);
+        signatureLabel.setBounds(680, 620, 120, 90);
+
+        tree400Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree.png"))); // NOI18N
+        mainPanel.add(tree400Label);
+        tree400Label.setBounds(40, 290, 265, 451);
+
+        tree300Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_300.png"))); // NOI18N
+        mainPanel.add(tree300Label);
+        tree300Label.setBounds(0, 240, 180, 330);
+
+        tree300Label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_300.png"))); // NOI18N
+        mainPanel.add(tree300Label1);
+        tree300Label1.setBounds(970, 320, 180, 330);
+
+        tree200Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_200.png"))); // NOI18N
+        mainPanel.add(tree200Label);
+        tree200Label.setBounds(910, 250, 117, 199);
+
+        envelopeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/envelope.png"))); // NOI18N
+        mainPanel.add(envelopeLabel);
+        envelopeLabel.setBounds(300, 220, 600, 771);
+
+        tree150Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_150.png"))); // NOI18N
+        mainPanel.add(tree150Label);
+        tree150Label.setBounds(180, 260, 88, 150);
+
+        skyPanel.setBackground(new java.awt.Color(102, 204, 255));
+
+        tabbedPane.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
+
+        answerTabPane.setBackground(new java.awt.Color(102, 204, 255));
+
+        questionLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        questionLabel.setText("What literary device is this?");
+
+        checkButton.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        checkButton.setText("Check answer");
+
+        javax.swing.GroupLayout answerTabPaneLayout = new javax.swing.GroupLayout(answerTabPane);
+        answerTabPane.setLayout(answerTabPaneLayout);
+        answerTabPaneLayout.setHorizontalGroup(
+            answerTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(answerTabPaneLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(questionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(349, 349, 349)
+                .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addComponent(jLabel1)
-                .addContainerGap(176, Short.MAX_VALUE))
+        answerTabPaneLayout.setVerticalGroup(
+            answerTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(answerTabPaneLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(answerTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(answerTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(checkButton)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        tabbedPane.addTab("Answer", answerTabPane);
+
+        clueTabPane.setBackground(new java.awt.Color(102, 204, 255));
+
+        clueTitleLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        clueTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clueTitleLabel.setText("Clue:");
+
+        clueLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        clueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clueLabel.setText("<html>Your clue will appear here.<br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf.</html>");
+        clueLabel.setToolTipText("");
+
+        javax.swing.GroupLayout clueTabPaneLayout = new javax.swing.GroupLayout(clueTabPane);
+        clueTabPane.setLayout(clueTabPaneLayout);
+        clueTabPaneLayout.setHorizontalGroup(
+            clueTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clueTabPaneLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(clueTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(clueLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 980, Short.MAX_VALUE)
+                .addGap(18, 18, 18))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        clueTabPaneLayout.setVerticalGroup(
+            clueTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clueTabPaneLayout.createSequentialGroup()
+                .addGroup(clueTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(clueTabPaneLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(clueTitleLabel))
+                    .addGroup(clueTabPaneLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
+
+        tabbedPane.addTab("Clue", clueTabPane);
+
+        commentsTabPane.setBackground(new java.awt.Color(102, 204, 255));
+
+        commentsLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        commentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        commentsLabel.setText("<html>Comments will appear here.<br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.<html>");
+        commentsLabel.setToolTipText("");
+
+        javax.swing.GroupLayout commentsTabPaneLayout = new javax.swing.GroupLayout(commentsTabPane);
+        commentsTabPane.setLayout(commentsTabPaneLayout);
+        commentsTabPaneLayout.setHorizontalGroup(
+            commentsTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(commentsTabPaneLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1069, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        commentsTabPaneLayout.setVerticalGroup(
+            commentsTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commentsTabPaneLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
+        );
+
+        tabbedPane.addTab("More Info", commentsTabPane);
+
+        exampleTabPane.setBackground(new java.awt.Color(102, 204, 255));
+
+        exampleLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
+        exampleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exampleLabel.setText("<html>Examples will appear here.<br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.<html>");
+        exampleLabel.setToolTipText("");
+
+        javax.swing.GroupLayout exampleTabPaneLayout = new javax.swing.GroupLayout(exampleTabPane);
+        exampleTabPane.setLayout(exampleTabPaneLayout);
+        exampleTabPaneLayout.setHorizontalGroup(
+            exampleTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exampleTabPaneLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(exampleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1069, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+        exampleTabPaneLayout.setVerticalGroup(
+            exampleTabPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exampleTabPaneLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exampleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
+        );
+
+        tabbedPane.addTab("More Examples", exampleTabPane);
+
+        javax.swing.GroupLayout skyPanelLayout = new javax.swing.GroupLayout(skyPanel);
+        skyPanel.setLayout(skyPanelLayout);
+        skyPanelLayout.setHorizontalGroup(
+            skyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabbedPane)
+        );
+        skyPanelLayout.setVerticalGroup(
+            skyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, skyPanelLayout.createSequentialGroup()
+                .addContainerGap(260, Short.MAX_VALUE)
+                .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(208, 208, 208))
+        );
+
+        mainPanel.add(skyPanel);
+        skyPanel.setBounds(0, -260, 1140, 600);
+
+        getContentPane().add(mainPanel);
+        mainPanel.setBounds(0, 0, 1140, 1040);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,8 +288,30 @@ public class AChristmasCarol extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel answerTabPane;
+    private javax.swing.JTextField answerTextField;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton checkButton;
+    private javax.swing.JLabel clueLabel;
+    private javax.swing.JPanel clueTabPane;
+    private javax.swing.JLabel clueTitleLabel;
+    private javax.swing.JLabel commentsLabel;
+    private javax.swing.JPanel commentsTabPane;
+    private javax.swing.JLabel envelopeLabel;
+    private javax.swing.JLabel exampleLabel;
+    private javax.swing.JPanel exampleTabPane;
+    private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel passageLabel;
+    private javax.swing.JLabel questionLabel;
+    private javax.swing.JLabel salutationLabel;
+    private javax.swing.JLabel signatureLabel;
+    private javax.swing.JPanel skyPanel;
+    private javax.swing.JTabbedPane tabbedPane;
+    private javax.swing.JLabel tree150Label;
+    private javax.swing.JLabel tree200Label;
+    private javax.swing.JLabel tree300Label;
+    private javax.swing.JLabel tree300Label1;
+    private javax.swing.JLabel tree400Label;
     // End of variables declaration//GEN-END:variables
 
 }
