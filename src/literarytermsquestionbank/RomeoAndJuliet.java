@@ -46,10 +46,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setBounds(new java.awt.Rectangle(0, 0, 1130, 822));
+        setBounds(new java.awt.Rectangle(0, 0, 1140, 790));
         setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1140, 790));
         setPreferredSize(new java.awt.Dimension(1140, 790));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -193,7 +194,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         );
         secondaryPanelLayout.setVerticalGroup(
             secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
+            .addComponent(tabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         tabbedPane.getAccessibleContext().setAccessibleName("");
@@ -216,7 +217,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         backgroundLabel.setBounds(137, 0, 506, 751);
 
         getContentPane().add(mainPanel);
-        mainPanel.setBounds(0, 0, 1130, 822);
+        mainPanel.setBounds(0, -1, 1130, 760);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
