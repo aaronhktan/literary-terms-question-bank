@@ -6,6 +6,16 @@
 
 package literarytermsquestionbank;
 
+import java.awt.Color;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Random;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 /**
  *
  * @author Aaron
@@ -51,6 +61,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1140, 790));
         setPreferredSize(new java.awt.Dimension(1140, 790));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -67,6 +82,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         checkButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
         checkButton.setText("Check answer");
+        checkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkButtonActionPerformed(evt);
+            }
+        });
 
         imageButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/quill.png"))); // NOI18N
 
@@ -205,7 +225,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         mainPanel.setBackground(new java.awt.Color(251, 235, 204));
         mainPanel.setLayout(null);
 
-        passageLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        passageLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 36)); // NOI18N
         passageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         passageLabel.setText("<html>The passage will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.<html>");
         passageLabel.setToolTipText("");
@@ -221,6 +241,75 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    int totalNumberOfQuotes = 0; // Used to keep track of how many quotes there are
+    String answer; // Used to keep track of the correct answer
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // Init randomizer
+        Random rand = new Random();
+        
+        JSONParser parser = new JSONParser();
+        
+        try {
+            // This string gets the current directory of this app
+            String filePath = new File("").getAbsolutePath();
+            // This object is the result of parsing the JSON file at the relative filepath as defined above; the JSON file is in the Resources source package.
+            Object obj = parser.parse(new FileReader(filePath + "/src/Resources/db.json"));
+            
+            // This casts the object to a JSONObject for future manipulation
+            JSONObject jsonObject = (JSONObject) obj;
+            
+            // This array holds all the quotes
+            JSONArray quotesArray = (JSONArray) jsonObject.get("Romeo and Juliet");
+            Iterator <JSONObject> iterator = quotesArray.iterator();
+            ArrayList <JSONObject> quotesList = new ArrayList();
+            
+            // Using the iterator as declared above, add each JSONObject in the Romeo and Juliet array to the ArrayList
+            while (iterator.hasNext()) {
+                Collections.addAll(quotesList, iterator.next());
+                totalNumberOfQuotes++;
+            }
+            
+            // Log the total number of quotes
+            System.out.println("The total number of quotes is: " + totalNumberOfQuotes + " and the size of the array is: " + quotesList.size());
+            
+            // Generate a random integer between 0 and size of the ArrayList
+            int quoteIndex = rand.nextInt(quotesList.size());
+            
+            // Get the second element of the ArrayList and print it
+            System.out.println("The thing that was printed was: " + quotesList.get(quoteIndex));
+            
+            // Get the second element of the ArrayList and get the "Quote" part
+            System.out.println("The quote is " + quotesList.get(quoteIndex).get("Quote"));
+            
+            // Set comments and clue
+            commentsLabel.setText("<html> Comments:<br><br>" + (String)quotesList.get(quoteIndex).get("Comment") + "</html>");
+            clueLabel.setText("<html>" + (String)quotesList.get(quoteIndex).get("Hint") + "</html>");
+            
+            // Set main panel
+            passageLabel.setText("<html>" + (String)quotesList.get(quoteIndex).get("Quote") + "</html>");
+            
+            // Set the answer
+            answer = (String)quotesList.get(quoteIndex).get("Literary Device");
+            
+        } catch (Exception e) {
+            System.out.println("Uh oh, something happened.");
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void checkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkButtonActionPerformed
+        String answerToCheck;
+        try {
+            answerToCheck = answerTextField.getText();
+            if (answerToCheck.equals(answer)) {
+                checkButton.setText("Correct!");
+                checkButton.setForeground(Color.green);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_checkButtonActionPerformed
 
     /**
      * @param args the command line arguments

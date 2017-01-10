@@ -1,0 +1,386 @@
+{
+  "Romeo and Juliet": [
+    {
+      "Literary Device": "Alliteration\n",
+      "Quote": "\"From forth the fatal loins of these two foes...\"",
+      "Act": "Prologue\n",
+      "Line Number": "5",
+      "Comment": "In each of the words \"from\", \"forth\", and \"fatal\", the first letter is f. This is alliteration, the repetition of the initial letter in two or more words.",
+      "Hint": "Look at the first letters!"
+    },
+    {
+      "Literary Device": "Assonance",
+      "Quote": "...dignity / ... / ...mutiny",
+      "Act": "Prologue\n",
+      "Line Number": "1-3",
+      "Comment": "In both dignity and mutiny, the vowels sound similar, but they are not perfect rhymes.",
+      "Hint": "Try saying these out loud."
+    },
+    {
+      "Literary Device": "Alliteration\n/Consonance",
+      "Quote": "\"Doth with their death...\"",
+      "Act": "Prologue\n",
+      "Line Number": "8",
+      "Comment": "In death and doth, there are repeated consonant sounds (d - th). In this case, it could be either a case of alliteration, as the initial letters are the same, or consonance, as the final consonants agree even as the vowels do not.\n",
+      "Hint": "Say the first and last words out loud one after the other. What's similar? What's different?\n"
+    },
+    {
+      "Literary Device": "Couplet",
+      "Quote": "\"The which, if you with patient ears attend, / What here shall miss, our toil shall strive to mend.\"",
+      "Act": "Prologue\n",
+      "Line Number": "13/14",
+      "Comment": "At the end of many acts, Shakespeare ends them with a couplet: two lines, rhyming with the pattern aa (here, attend/mend).",
+      "Hint": "Check out the last words. How do they sound?"
+    },
+    {
+      "Literary Device": "Syncope",
+      "Quote": "Therefore if thou art moved thou runn'st...",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "10",
+      "Comment": "Much like conjunctions, when there is an apostrophe in the place of a vowel or syllable, something has been removed. Here, \"thou runnest\" becomes shortened to \"thou runn'st\". Because the shortening is one word, it is a syncope rather than an elision. Syncope is often confused with elision, whose shortening is between two words rather than one.",
+      "Hint": "Why is there an apostrophe there?"
+    },
+    {
+      "Literary Device": "Connotation",
+      "Quote": "\"I... will thrust his maids to the wall...\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "18/19",
+      "Comment": "Thrust has sexual meanings when used in this context, suggested by the vulgar wordplay between the two servants. This is connotation - meaning beyond the dictionary definition.",
+      "Hint": "What does thrust mean? How is it used?"
+    },
+    {
+      "Literary Device": "Metaphor / Imagery",
+      "Quote": "\"That quench the fire of your pernicious rage...\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "86",
+      "Comment": "The rage between the houses is being compared to fire, using a metaphor to create imagery.\n",
+      "Hint": "Is rage fiery? What does that make you think of?"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "\"Women, being / the weaker vessels\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "16/17",
+      "Comment": "In this context, it is a biblical reference to 1 Peter 3:7, \"Husbands, in the same way be considerate as you live with your wives, and treat them with respect as the weaker partner...\". Don't sweat it if you don't know this though. Allusions will frequently refer to more famous historical/literary figures.\n"
+    },
+    {
+      "Literary Device": "Epithet",
+      "Quote": "\"The fiery Tybalt with his sword prepared\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "111",
+      "Comment": "\"Fiery Tybalt\" is used to describe Tybalt's lack of temper, and is used throughout the play. This is an epithet - an adjective or phrase highlighting a characteristic of a person or thing.",
+      "Hint": "What is Tybalt's personality like? How do characters refer to him in the play?\n"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "\"The fiery sun / Peered forth the golden window of the east\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "120/121",
+      "Comment": "The sun is turned into a more humanlike figure when it is described as \"peering\", which is what personification is.",
+      "Hint": "Can suns really peer?"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "\"The shady curtains from Aurora's bed\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "139",
+      "Comment": "Aurora was the Greek goddess of dawn. Here, Shakespeare makes a reference to a literary figure - allusion.",
+      "Hint": "Is Aurora a character in the play? Why is she mentioned here?\n"
+    },
+    {
+      "Literary Device": "Juxtaposition",
+      "Quote": "\"Alas that love, whose view is muffled still,\" / Should without eyes see pathways to his will!\"\n",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "176-177",
+      "Comment": "Sight is being used by Shakespeare in these two lines - first with blindness (\"whose view is muffled\") and then sight (\n\"see pathways to his will\"). This is an example of juxtaposition. This is not an antithesis, since there is no similar grammatical structure.",
+      "Hint": "There are opposite ideas expressed in here. \n"
+    },
+    {
+      "Literary Device": "Oxymoron",
+      "Quote": "\"O brawling love, o loving hate!",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "181",
+      "Comment": "Romeo addresses ideas of hateful love and loving hate - two oppositional ideas. This is an oxymoron. This is not an apostrophe, because Romeo is not speaking to these ideas.",
+      "Hint": "Does anything seem off about what words Romeo chooses to use to describe each of the nouns?\n"
+    },
+    {
+      "Literary Device": "Imagery / Metaphor",
+      "Quote": "\"A sea nourished with loving tears...\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "199",
+      "Comment": "This imagery appeals to your five senses. \"A sea of loving tears...\" Imagine the salty sea, the sound of the waves crashing on the shore, the deep blue depths... This is also a metaphor; it compares loving tears to a sea.",
+      "Hint": "What do you see when you hear this?"
+    },
+    {
+      "Literary Device": "Imagery / Metaphor",
+      "Quote": "\"A fire sparking in lovers' eyes...\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "198",
+      "Comment": "This is both imagery and a metaphor.",
+      "Hint": "Are there really fires in lovers' eyes?\n"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "\"She hath Dian's wit...\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "217",
+      "Comment": "Dian, the Roman goddess of hunting and maidenhood, did not marry. This is a reference to Roman mythology.",
+      "Hint": "Who is Dian?"
+    },
+    {
+      "Literary Device": "Enjambement",
+      "Quote": "\"She hath forsworn to love, and in that vow / Do I live dead, that live to tell it now.\"",
+      "Act": "1",
+      "Scene": "1",
+      "Line Number": "231/232",
+      "Comment": "The line break forces a pause between an otherwise uninterrupted sentence (here, \"in that vow / do I live dead\"). A caesura, by contrast, would have both on the same line but punctuation splitting the sentence.\n",
+      "Hint": "Why is there a line break? What does this serve?\n"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "\"When well-appareled April on the heel / Of limping winter treads...\"",
+      "Act": "1",
+      "Scene": "2",
+      "Line Number": "27",
+      "Comment": "April is not a person. It is a month. Yet here, Shakespeare describes it has \"well-appareled... on the heel\" - making it seem like a human being.",
+      "Hint": "Is April a person?\n"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "\"Earth hath swallowed all my hopes but she;\"",
+      "Act": "1",
+      "Scene": "2",
+      "Line Number": "13",
+      "Comment": "Earth is not a person, yet it can \"swallow\". This is personification - attributing human \nattributes and actions to a non-human thing.",
+      "Hint": "Can Earth \"swallow\" things?\n"
+    },
+    {
+      "Literary Device": "Elision",
+      "Quote": "\"God gi' good e'en.\"",
+      "Act": "1",
+      "Scene": "2",
+      "Line Number": "61",
+      "Comment": "The words are shortened to facilitate reading - the definition of elision. This is not syncope, as the removal affects how two words connect (\"gi' good\") rather than just how one word sounds.\n",
+      "Hint": "Why is there an apostrophe in the sentence?"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "\"Why, [Paris is] a man of wax.\"",
+      "Act": "1",
+      "Scene": "3",
+      "Line Number": "82",
+      "Comment": "Juliet is comparing Paris to \"a man of wax\", i.e. a perfect man that an artist would carve out of wax. This is an example of metaphor; there are no comparators such as \"like\" or \"as\".",
+      "Hint": "Is Paris really a \"man of wax\"? What does that mean?"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "\"Read o'er this volume of young Paris' face, / and find delight writ there with beauty's pen. / ... / This precious book of love, this unbound lover...\"",
+      "Act": "1",
+      "Scene": "3",
+      "Line Number": "87-94",
+      "Comment": "Lady Capulet compares Paris to a book in an extended metaphor.",
+      "Hint": "What is Paris being compared to here?"
+    },
+    {
+      "Literary Device": "Pun",
+      "Quote": "\"You have dancing shoes / with nimble soles. I have a soul of lead...\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "14-15\n",
+      "Comment": "By using the words \"soles\" and \"souls\" together, Shakespeare makes a pun with the homophony of the two words.",
+      "Hint": "Soles/souls???"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "\"[Love] pricks like thorn.\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "26",
+      "Comment": "Shakespeare compares love to a thorn; here, the comparison uses a comparator, \"like\". This makes it a simile.",
+      "Hint": "There's a comparison between love and thorn..."
+    },
+    {
+      "Literary Device": "Alliteration",
+      "Quote": "\"Here are the beetle brows shall blush for me.\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "32",
+      "Comment": "The repeated \"b\" in \"beetle brows\" and \"blush\" make alliteration.\n",
+      "Hint": "Look at the first letter of some of the words. What do they have in common?"
+    },
+    {
+      "Literary Device": "Syncope",
+      "Quote": "\"The game was ne'er so fair...\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "39",
+      "Comment": "The omitted v in \"never\" makes this a syncope, as the omission only affects one word. Not be confused with elision, which would involve at least two words.",
+      "Hint": "What is the purpose of the apostrophe?"
+    },
+    {
+      "Literary Device": "Syncope / Metaphor",
+      "Quote": "\"Her collars of moonshine's wat'ry beams...\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "67",
+      "Comment": "Here, Shakespeare compares Queen Mab's collars to moonshine's watery beams; this is a metaphor as well as a syncope. Shakespeare omits the \"e\" in watery.\n",
+      "Hint": "Notice the apostrophe in the sentence, as well as how collars are being compared."
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "\"I talk of dreams, / Which are the children of an idle brain...\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "104",
+      "Comment": "Dreams are not children, because they are not people. Here, Shakespeare personifies them by making them the \"children of an idle brain.\"",
+      "Hint": "Are dreams children?"
+    },
+    {
+      "Literary Device": "Enjambement \n",
+      "Quote": "\"...who woos / Even now the frozen bosom...\"\n",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "108",
+      "Comment": "The line break serves to emphasize the beginning of the next line - the \"frozen boso of the North\". This is enjambement - when a sentence does not finish on one line but wraps to the next.\n",
+      "Hint": "Does the line break feel natural to you? Why would Shakespeare put it there?"
+    },
+    {
+      "Literary Device": "Foreshadowing",
+      "Quote": "\"I fear too early... / ... / some vile forfeit of untimely death.\"",
+      "Act": "1",
+      "Scene": "4",
+      "Line Number": "118",
+      "Comment": "Romeo's line here foreshadows his death at the end of the play.\n",
+      "Hint": "Romeo is speaking. What does he do at the end of the play? Why is he speaking about death here?"
+    },
+    {
+      "Literary Device": "Caesura\n / Enjambement",
+      "Quote": "\"Ah, my mistresses, which of you all / Will now deny to dance? She that makes dainty...\"",
+      "Act": "1",
+      "Scene": "5",
+      "Line Number": "21-22",
+      "Comment": "This is an example of both enjambement (\"Which of you all / Will now...\") as the sentence wraps to the next line, but also a caesura (Will now deny to dance? She that makes dainty...\") as the sentence ends with a question mark in the middle of the line.",
+      "Hint": "What's with the line breaks and question marks?"
+    },
+    {
+      "Literary Device": "Caesura\n",
+      "Quote": "\"Am I the master here or you? Go to.\"",
+      "Act": "1",
+      "Scene": "5",
+      "Line Number": "88",
+      "Comment": "The question mark here breaks in the middle of one line. This is an example of caesura.\n",
+      "Hint": "This quote is entirely on one line. Why is there punctuation in the middle of the one line?\n"
+    },
+    {
+      "Literary Device": "Aside",
+      "Quote": "\"Is she a Capulet? / O dear account! My life is my foe's debt.",
+      "Act": "1",
+      "Scene": "5",
+      "Line Number": "131/132",
+      "Comment": "Romeo speaks directly to the audience, breaking the fourth wall. This line is not heard by anybody on stage other than himself. Both of these are characteristics of an aside.",
+      "Hint": "Romeo says these lines to the audience, and nobody else hears him.\n"
+    },
+    {
+      "Literary Device": "Paradox\n",
+      "Quote": "\"My only love sprung from my only hate!",
+      "Act": "1",
+      "Scene": "5",
+      "Line Number": "152",
+      "Comment": "Juliet speaks of her \"only love\" arising from her \"only hate\" ; these two oppositional words create a paradox.\n How can love come from hate?",
+      "Hint": "Love and hate. Two opposites, yet one creates the other for Juliet. It seems like it should be impossible."
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "\"As rich as a jewel in Ethiop's ear...\"",
+      "Act": "1",
+      "Scene": "5",
+      "Line Number": "53",
+      "Comment": "Romeo compares Juliet's beauty to a jewel upon a dark background (\"a jewel on Ethiop's ear\", i.e. a jewel on a black person). Because he uses comparators, this is a simile.",
+      "Hint": "How is Romeo phrasing this comparison? Does it use comparison words or is it implicit?"
+    },
+    {
+      "Literary Device": "Pathetic fallacy / Personification",
+      "Quote": "\"Young affection gapes to be his heir.\"",
+      "Act": "2",
+      "Scene": "1",
+      "Line Number": "2",
+      "Comment": "Shakespeare gives \"young affection\" a desire, a human attribute. The attribution of human passions (\"gaping\" to be his heir) is specifically a form of pathetic fallacy, and more generally also personification.",
+      "Hint": "Is \"young affection\" a person? How does it \"gape\" to be another's heir?"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "\"She steal love's bait from fearful hooks.\"",
+      "Act": "2",
+      "Scene": "1",
+      "Line Number": "8",
+      "Comment": "Love is being compared to bait, and Juliet's actions are compared to \"stealing\" the \"bait\" from \"featful hooks\". These comparisons are done implicitly.\n",
+      "Hint": "Is there a comparison being done here? How, if there is one, is it done?"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "\"When King Cophetua loved the beggar-maid...\"",
+      "Act": "2",
+      "Scene": "1",
+      "Line Number": "17",
+      "Comment": "King Cophetua refers to a story of an African king who did not love anybody until he saw a beggar-maid without clothing on the street. He offered her clothing and vowed to marry her or commit suicide. At the end, they lived a peaceful life and were well loved by their people. Mercutio reference this story (an allusion) while speaking to Romeo.",
+      "Hint": "Is King Cophetua a part of the story of a reference to some other work?"
+    },
+    {
+      "Literary Device": "Metaphor\n",
+      "Quote": "\"It is the East, and Juliet is the sun.",
+      "Act": "2",
+      "Scene": "2",
+      "Line Number": "3",
+      "Comment": "Romeo compares Juliet to the rising sun.",
+      "Hint": "Is Juliet really a sun? Why does Romeo compare her to one?\n"
+    },
+    {
+      "Literary Device": "Apostrophe\n / Personification",
+      "Quote": "\"Arise, fair sun, and kill the envious moon...\"",
+      "Act": "2",
+      "Scene": "2",
+      "Line Number": "4",
+      "Comment": "Romeo is speaking to the sun, an absent entity. This is an example of personification, or apostrophe.",
+      "Hint": "Whom is Romeo talking to?\n"
+    },
+    {
+      "Literary Device": "Euphony",
+      "Quote": "\"But soft, what light through yonder window breaks?\"",
+      "Act": "2",
+      "Scene": "2",
+      "Line Number": "2",
+      "Comment": "The combination of soft consonants (w in \"what\" and \"window\", y in \"yonder\", as well as the long vowels (in \"sOft\", \"yOnder\") both contribute to a melodious and soft line. This is a more difficult literary device to pick out; try and look out for the soft consonants and long vowels to spot it!",
+      "Hint": "Try saying this one aloud and see how it sounds. Is it pleasant? Does it sound painful?"
+    },
+    {
+      "Literary Device": "Hyperbole / Simile",
+      "Quote": "\"[In reference to Juliet] As glorious to this night, being o'er my head, / as a wingèd messenger of heaven...\"",
+      "Act": "2",
+      "Scene": "2",
+      "Line Number": "30/31",
+      "Comment": "Juliet is not really *that* pretty, although she may be to Romeo. This is both an example of simile as well as hyperobole.\n",
+      "Hint": "When Romeo says this, he is clearly blowing Juliet's beauty a bit out of proportion.\n"
+    },
+    {
+      "Literary Device": "Pathetic fallacy / Personificaton",
+      "Quote": "\"By love, that first did prompt me to inquire. / He lent me counsel, and I lent him eyes.\"",
+      "Act": "2",
+      "Scene": "2",
+      "Line Number": "85/86",
+      "Comment": "Here, Romeo casts love as his guide; he makes love out to be a person, who guides him towards finding Juliet. This gives love, a non-human entity, human desires - pathetic fallacy and personification.",
+      "Hint": "In what way does Romeo refer to love in this passage?"
+    }
+  ]
+}
