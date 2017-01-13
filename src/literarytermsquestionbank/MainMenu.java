@@ -9,6 +9,10 @@ import java.awt.Cursor;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import javax.swing.JOptionPane;
 
 /**
@@ -196,10 +200,13 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void listLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listLabelMouseClicked
         try {
-            // This string gets the current directory of this app
-            String filePath = new File("").getAbsolutePath();
             // This app gets the file located at the filepath
-            File literaryTermsList = new File(filePath + "/src/Resources/Literary terms LIST.pdf");
+            String inputPDF = "Resources/LiteraryTermsList.pdf";
+            InputStream literaryDevicesAsStream = getClass().getClassLoader().getResourceAsStream(inputPDF);
+            Path tempOutput = Files.createTempFile("TempList", ".pdf");
+            tempOutput.toFile().deleteOnExit();
+            Files.copy(literaryDevicesAsStream, tempOutput, StandardCopyOption.REPLACE_EXISTING);
+            File literaryTermsList = new File(tempOutput.toFile().getPath());
             // And then opens the PDF file with whatever the user has installed as their PDF reader
             Desktop.getDesktop().open(literaryTermsList);
         } catch (IOException e) { // User does not have a program to open PDFs

@@ -9,6 +9,7 @@ package literarytermsquestionbank;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -177,7 +178,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
             .addGroup(clueTabPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("Clue", clueTabPanel);
@@ -248,7 +249,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         tabbedPane.getAccessibleContext().setAccessibleName("");
 
         getContentPane().add(secondaryPanel);
-        secondaryPanel.setBounds(808, 0, 322, 430);
+        secondaryPanel.setBounds(808, 0, 344, 430);
 
         navigationPanel.setBackground(new java.awt.Color(255, 255, 255));
         navigationPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
@@ -396,10 +397,9 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         JSONParser parser = new JSONParser();
         
         try {
-            // This string gets the current directory of this app
-            String filePath = new File("").getAbsolutePath();
             // This object is the result of parsing the JSON file at the relative filepath as defined above; the JSON file is in the Resources source package.
-            Object quoteObj = parser.parse(new FileReader(filePath + "/src/Resources/db.json"));
+            Object quoteObj = parser.parse(new InputStreamReader(getClass().getResourceAsStream("/Resources/db.json")));
+            System.out.println(getClass().getResourceAsStream("/Resources/db.json"));
             
             // This casts the object to a JSONObject for future manipulation
             JSONObject jsonObject = (JSONObject) quoteObj;
