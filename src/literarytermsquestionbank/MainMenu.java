@@ -6,6 +6,10 @@
 package literarytermsquestionbank;
 
 import java.awt.Cursor;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,8 +31,12 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        underConstructionNote1 = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         shortStoriesLabel = new javax.swing.JLabel();
+        underConstructionNote = new javax.swing.JLabel();
+        underConstructionNote2 = new javax.swing.JLabel();
+        underConstructionNote3 = new javax.swing.JLabel();
         RomeoAndJulietLabel = new javax.swing.JLabel();
         ChristmasCarolLabel = new javax.swing.JLabel();
         listLabel = new javax.swing.JLabel();
@@ -36,6 +44,8 @@ public class MainMenu extends javax.swing.JFrame {
         creditsLabel = new javax.swing.JLabel();
         titleLabel = new javax.swing.JLabel();
         backgroundImage = new javax.swing.JLabel();
+
+        underConstructionNote1.setText("Under construction!");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -57,6 +67,18 @@ public class MainMenu extends javax.swing.JFrame {
         });
         mainPanel.add(shortStoriesLabel);
         shortStoriesLabel.setBounds(60, 20, 160, 580);
+
+        underConstructionNote.setText("Under construction!");
+        mainPanel.add(underConstructionNote);
+        underConstructionNote.setBounds(880, 490, 100, 14);
+
+        underConstructionNote2.setText("Under construction!");
+        mainPanel.add(underConstructionNote2);
+        underConstructionNote2.setBounds(90, 460, 100, 14);
+
+        underConstructionNote3.setText("Under construction!");
+        mainPanel.add(underConstructionNote3);
+        underConstructionNote3.setBounds(510, 440, 100, 14);
 
         RomeoAndJulietLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -82,6 +104,9 @@ public class MainMenu extends javax.swing.JFrame {
 
         listLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         listLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 listLabelMouseEntered(evt);
             }
@@ -169,6 +194,19 @@ public class MainMenu extends javax.swing.JFrame {
         new AChristmasCarol().setVisible(true);
     }//GEN-LAST:event_ChristmasCarolLabelMouseClicked
 
+    private void listLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listLabelMouseClicked
+        try {
+            // This string gets the current directory of this app
+            String filePath = new File("").getAbsolutePath();
+            // This app gets the file located at the filepath
+            File literaryTermsList = new File(filePath + "/src/Resources/Literary terms LIST.pdf");
+            // And then opens the PDF file with whatever the user has installed as their PDF reader
+            Desktop.getDesktop().open(literaryTermsList);
+        } catch (IOException e) { // User does not have a program to open PDFs
+            JOptionPane.showMessageDialog(null, "Seem like you don't have a program to open PDF files.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_listLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -214,6 +252,10 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel shortStoriesLabel;
     private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel underConstructionNote;
+    private javax.swing.JLabel underConstructionNote1;
+    private javax.swing.JLabel underConstructionNote2;
+    private javax.swing.JLabel underConstructionNote3;
     // End of variables declaration//GEN-END:variables
 
 }
