@@ -224,32 +224,32 @@ public class ShortStories extends javax.swing.JFrame {
         mainPanel.add(passageLabel);
         passageLabel.setBounds(640, 180, 320, 320);
 
-        lambLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Lamb.png"))); // NOI18N
+        lambLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/Lamb.png"))); // NOI18N
         mainPanel.add(lambLabel);
         lambLabel.setBounds(40, -20, 420, 280);
 
-        mouseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/mouse.png"))); // NOI18N
+        mouseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/mouse.png"))); // NOI18N
         mainPanel.add(mouseLabel);
         mouseLabel.setBounds(440, 530, 310, 270);
 
-        watermelonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/watermelon.png"))); // NOI18N
+        watermelonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/watermelon.png"))); // NOI18N
         mainPanel.add(watermelonLabel);
         watermelonLabel.setBounds(720, 470, 430, 390);
 
-        spoonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/spoon.png"))); // NOI18N
+        spoonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/spoon.png"))); // NOI18N
         mainPanel.add(spoonLabel);
         spoonLabel.setBounds(220, 20, 450, 460);
 
-        forkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/fork.png"))); // NOI18N
+        forkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/fork.png"))); // NOI18N
         forkLabel.setToolTipText("");
         mainPanel.add(forkLabel);
         forkLabel.setBounds(930, -50, 470, 580);
 
-        plateLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/plate.png"))); // NOI18N
+        plateLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/plate.png"))); // NOI18N
         mainPanel.add(plateLabel);
         plateLabel.setBounds(550, 80, 500, 510);
 
-        tableclothLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/tablecloth-texture.gif"))); // NOI18N
+        tableclothLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/tablecloth-texture.gif"))); // NOI18N
         mainPanel.add(tableclothLabel);
         tableclothLabel.setBounds(-5, 1, 1150, 790);
 

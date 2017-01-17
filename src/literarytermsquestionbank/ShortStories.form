@@ -348,7 +348,7 @@
         <Component class="javax.swing.JLabel" name="lambLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/Lamb.png"/>
+              <Image iconType="3" name="/Resources/Images/Lamb.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -360,7 +360,7 @@
         <Component class="javax.swing.JLabel" name="mouseLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/mouse.png"/>
+              <Image iconType="3" name="/Resources/Images/mouse.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -372,7 +372,7 @@
         <Component class="javax.swing.JLabel" name="watermelonLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/watermelon.png"/>
+              <Image iconType="3" name="/Resources/Images/watermelon.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -384,7 +384,7 @@
         <Component class="javax.swing.JLabel" name="spoonLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/spoon.png"/>
+              <Image iconType="3" name="/Resources/Images/spoon.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -396,7 +396,7 @@
         <Component class="javax.swing.JLabel" name="forkLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/fork.png"/>
+              <Image iconType="3" name="/Resources/Images/fork.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
@@ -409,7 +409,7 @@
         <Component class="javax.swing.JLabel" name="plateLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/plate.png"/>
+              <Image iconType="3" name="/Resources/Images/plate.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -421,7 +421,7 @@
         <Component class="javax.swing.JLabel" name="tableclothLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Resources/tablecloth-texture.gif"/>
+              <Image iconType="3" name="/Resources/Images/tablecloth-texture.gif"/>
             </Property>
           </Properties>
           <Constraints>

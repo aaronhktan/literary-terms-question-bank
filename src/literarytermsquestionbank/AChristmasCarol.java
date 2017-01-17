@@ -77,27 +77,27 @@ public class AChristmasCarol extends javax.swing.JFrame {
         mainPanel.add(signatureLabel);
         signatureLabel.setBounds(680, 620, 120, 90);
 
-        tree400Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree.png"))); // NOI18N
+        tree400Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree.png"))); // NOI18N
         mainPanel.add(tree400Label);
         tree400Label.setBounds(40, 290, 265, 451);
 
-        tree300Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_300.png"))); // NOI18N
+        tree300Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
         mainPanel.add(tree300Label);
         tree300Label.setBounds(0, 240, 180, 330);
 
-        tree300Label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_300.png"))); // NOI18N
+        tree300Label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
         mainPanel.add(tree300Label1);
         tree300Label1.setBounds(970, 320, 180, 330);
 
-        tree200Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_200.png"))); // NOI18N
+        tree200Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_200.png"))); // NOI18N
         mainPanel.add(tree200Label);
         tree200Label.setBounds(910, 250, 117, 199);
 
-        envelopeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/envelope.png"))); // NOI18N
+        envelopeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/envelope.png"))); // NOI18N
         mainPanel.add(envelopeLabel);
         envelopeLabel.setBounds(300, 220, 600, 771);
 
-        tree150Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/ChristmasTree_150.png"))); // NOI18N
+        tree150Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_150.png"))); // NOI18N
         mainPanel.add(tree150Label);
         tree150Label.setBounds(180, 260, 88, 150);
 

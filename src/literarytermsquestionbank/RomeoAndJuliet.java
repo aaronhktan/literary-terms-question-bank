@@ -7,13 +7,17 @@
 package literarytermsquestionbank;
 
 import java.awt.Color;
-import java.io.File;
-import java.io.FileReader;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -27,7 +31,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     /** Creates new form RomeoAndJuliet */
     public RomeoAndJuliet() {
         initComponents();
-         getRootPane().setDefaultButton(checkButton); // Sets the default button
+        getRootPane().setDefaultButton(checkButton); // Sets the default button
     }
 
     /** This method is called from within the constructor to
@@ -54,14 +58,6 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         commentsLabel = new javax.swing.JLabel();
         exampleTabPanel = new javax.swing.JPanel();
         examplesLabel = new javax.swing.JLabel();
-        navigationPanel = new javax.swing.JPanel();
-        previousButton = new javax.swing.JButton();
-        nextButton = new javax.swing.JButton();
-        youAreViewingLabel = new javax.swing.JLabel();
-        totalNumberLabel = new javax.swing.JLabel();
-        quoteIndexTextField = new javax.swing.JTextField();
-        goButton = new javax.swing.JButton();
-        randomButton = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         quoteBottomLabel = new javax.swing.JLabel();
         quoteTopLabel = new javax.swing.JLabel();
@@ -73,13 +69,21 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         roseLabel = new javax.swing.JLabel();
         knifeLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
+        navigationPanel = new javax.swing.JPanel();
+        previousButton = new javax.swing.JButton();
+        nextButton = new javax.swing.JButton();
+        youAreViewingLabel = new javax.swing.JLabel();
+        totalNumberLabel = new javax.swing.JLabel();
+        quoteIndexTextField = new javax.swing.JTextField();
+        goButton = new javax.swing.JButton();
+        randomButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 1140, 790));
         setForeground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1140, 790));
-        setPreferredSize(new java.awt.Dimension(1140, 790));
+        setMinimumSize(new java.awt.Dimension(1140, 640));
+        setPreferredSize(new java.awt.Dimension(1140, 640));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -90,6 +94,8 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         secondaryPanel.setBackground(new java.awt.Color(255, 255, 255));
         secondaryPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        secondaryPanel.setMinimumSize(new java.awt.Dimension(320, 300));
+        secondaryPanel.setPreferredSize(new java.awt.Dimension(320, 300));
 
         tabbedPane.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
         tabbedPane.setName("Answer"); // NOI18N
@@ -99,6 +105,12 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         questionLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
         questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         questionLabel.setText("What literary device is this?");
+
+        answerTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerTextFieldMouseClicked(evt);
+            }
+        });
 
         checkButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
         checkButton.setText("Check answer");
@@ -129,30 +141,30 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
             .addGroup(answerTabPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(answerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(questionLabel, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                    .addComponent(answerTextField, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(answerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                     .addComponent(checkButton, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(answerTextField, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(stuckLabel, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(rescueButton, javax.swing.GroupLayout.Alignment.CENTER))
+                    .addComponent(rescueButton, javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(questionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE))
                 .addContainerGap())
         );
         answerTabPanelLayout.setVerticalGroup(
             answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(answerTabPanelLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(29, 29, 29)
                 .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(stuckLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rescueButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(answerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(answerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         tabbedPane.addTab("Answer", answerTabPanel);
@@ -161,7 +173,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         clueLabel.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
         clueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clueLabel.setText("<html>Your clue will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin.</html>");
+        clueLabel.setText("<html>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank.</html>");
         clueLabel.setToolTipText("");
 
         javax.swing.GroupLayout clueTabPanelLayout = new javax.swing.GroupLayout(clueTabPanel);
@@ -169,15 +181,15 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         clueTabPanelLayout.setHorizontalGroup(
             clueTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clueTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(clueLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(32, 32, 32)
+                .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         clueTabPanelLayout.setVerticalGroup(
             clueTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clueTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -185,9 +197,9 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         commentsTabPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        commentsLabel.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
+        commentsLabel.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
         commentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        commentsLabel.setText("<html>Comments will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin. Filet mignon jowl turducken flank landjaeger andouille biltong, venison rump burgdoggen prosciutto pastrami shoulder. Pancetta frankfurter ham strip steak, brisket tenderloin spare ribs alcatra beef ribs chuck. Hamburger pancetta pig bacon. Beef ribs shank picanha ball tip t-bone biltong shoulder pork chop.<html>");
+        commentsLabel.setText("<html>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank.</html>");
         commentsLabel.setToolTipText("");
 
         javax.swing.GroupLayout commentsTabPanelLayout = new javax.swing.GroupLayout(commentsTabPanel);
@@ -195,16 +207,16 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         commentsTabPanelLayout.setHorizontalGroup(
             commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commentsTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(commentsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(37, 37, 37)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         commentsTabPanelLayout.setVerticalGroup(
             commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commentsTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(commentsLabel)
-                .addContainerGap())
+                .addGap(43, 43, 43)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("More Info", commentsTabPanel);
@@ -213,7 +225,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
         examplesLabel.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
         examplesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        examplesLabel.setText("<html>More examples will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf. Pork belly bacon alcatra cupim hamburger short loin picanha fatback beef tail ribeye meatball capicola frankfurter. Short loin ground round corned beef pancetta, salami cow pork chop cupim shank tail.  Pancetta short ribs doner drumstick short loin. Filet mignon jowl turducken flank landjaeger andouille biltong, venison rump burgdoggen prosciutto pastrami shoulder. Pancetta frankfurter ham strip steak, brisket tenderloin spare ribs alcatra beef ribs chuck. Hamburger pancetta pig bacon. Beef ribs shank picanha ball tip t-bone biltong shoulder pork chop.</html>");
+        examplesLabel.setText("<html>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank.</html>");
         examplesLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout exampleTabPanelLayout = new javax.swing.GroupLayout(exampleTabPanel);
@@ -221,16 +233,16 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         exampleTabPanelLayout.setHorizontalGroup(
             exampleTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(exampleTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(examplesLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(27, 27, 27)
+                .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         exampleTabPanelLayout.setVerticalGroup(
             exampleTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exampleTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(examplesLabel)
-                .addContainerGap())
+            .addGroup(exampleTabPanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("More examples", exampleTabPanel);
@@ -243,13 +255,81 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         );
         secondaryPanelLayout.setVerticalGroup(
             secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         tabbedPane.getAccessibleContext().setAccessibleName("");
 
         getContentPane().add(secondaryPanel);
-        secondaryPanel.setBounds(808, 0, 344, 430);
+        secondaryPanel.setBounds(810, 0, 320, 320);
+
+        mainPanel.setBackground(new java.awt.Color(251, 235, 204));
+        mainPanel.setLayout(null);
+
+        quoteBottomLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
+        quoteBottomLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quoteBottomLabel.setText("\"");
+        quoteBottomLabel.setToolTipText("");
+        mainPanel.add(quoteBottomLabel);
+        quoteBottomLabel.setBounds(370, 430, 50, 50);
+
+        quoteTopLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
+        quoteTopLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quoteTopLabel.setText("\"");
+        quoteTopLabel.setToolTipText("");
+        mainPanel.add(quoteTopLabel);
+        quoteTopLabel.setBounds(370, 200, 50, 50);
+
+        actLabel.setFont(new java.awt.Font("Algerian", 0, 30)); // NOI18N
+        actLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        actLabel.setText("---ACT 1---");
+        actLabel.setToolTipText("");
+        mainPanel.add(actLabel);
+        actLabel.setBounds(210, 120, 380, 40);
+
+        sceneLabel.setFont(new java.awt.Font("Old English Text MT", 0, 18)); // NOI18N
+        sceneLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        sceneLabel.setText("---Scene 1---");
+        sceneLabel.setToolTipText("");
+        mainPanel.add(sceneLabel);
+        sceneLabel.setBounds(250, 160, 170, 20);
+
+        lineNumberLabel.setFont(new java.awt.Font("Algerian", 0, 18)); // NOI18N
+        lineNumberLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lineNumberLabel.setText("14-15");
+        mainPanel.add(lineNumberLabel);
+        lineNumberLabel.setBounds(310, 160, 230, 19);
+
+        passageLabel.setFont(new java.awt.Font("Viner Hand ITC", 0, 14)); // NOI18N
+        passageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        passageLabel.setText("<html>The passage will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank.<html>");
+        passageLabel.setToolTipText("");
+        mainPanel.add(passageLabel);
+        passageLabel.setBounds(250, 180, 300, 330);
+
+        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/Scroll_v3.png"))); // NOI18N
+        mainPanel.add(backgroundLabel);
+        backgroundLabel.setBounds(170, 40, 456, 510);
+
+        roseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/rose.png"))); // NOI18N
+        mainPanel.add(roseLabel);
+        roseLabel.setBounds(540, 90, 430, 230);
+
+        knifeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/knife.png"))); // NOI18N
+        knifeLabel.setText("jLabel1");
+        mainPanel.add(knifeLabel);
+        knifeLabel.setBounds(70, 230, 220, 290);
+
+        backButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
+        backButton.setText("< Back");
+        backButton.setOpaque(false);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        mainPanel.add(backButton);
+        backButton.setBounds(10, 10, 90, 50);
 
         navigationPanel.setBackground(new java.awt.Color(255, 255, 255));
         navigationPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
@@ -263,7 +343,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(previousButton);
-        previousButton.setBounds(20, 280, 89, 27);
+        previousButton.setBounds(20, 230, 89, 27);
 
         nextButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
         nextButton.setText("Next");
@@ -273,7 +353,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(nextButton);
-        nextButton.setBounds(240, 280, 69, 27);
+        nextButton.setBounds(240, 230, 69, 27);
 
         youAreViewingLabel.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -287,6 +367,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         totalNumberLabel.setBounds(171, 70, 100, 49);
 
         quoteIndexTextField.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 24)); // NOI18N
+        quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quoteIndexTextFieldMouseClicked(evt);
+            }
+        });
         navigationPanel.add(quoteIndexTextField);
         quoteIndexTextField.setBounds(90, 70, 70, 39);
 
@@ -310,79 +395,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         navigationPanel.add(randomButton);
         randomButton.setBounds(110, 160, 120, 40);
 
-        getContentPane().add(navigationPanel);
-        navigationPanel.setBounds(810, 430, 320, 320);
-
-        mainPanel.setBackground(new java.awt.Color(251, 235, 204));
-        mainPanel.setLayout(null);
-
-        quoteBottomLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
-        quoteBottomLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        quoteBottomLabel.setText("\"");
-        quoteBottomLabel.setToolTipText("");
-        mainPanel.add(quoteBottomLabel);
-        quoteBottomLabel.setBounds(360, 570, 50, 50);
-
-        quoteTopLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
-        quoteTopLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        quoteTopLabel.setText("\"");
-        quoteTopLabel.setToolTipText("");
-        mainPanel.add(quoteTopLabel);
-        quoteTopLabel.setBounds(360, 210, 50, 50);
-
-        actLabel.setFont(new java.awt.Font("Algerian", 0, 36)); // NOI18N
-        actLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        actLabel.setText("---ACT 1---");
-        actLabel.setToolTipText("");
-        mainPanel.add(actLabel);
-        actLabel.setBounds(200, 120, 380, 40);
-
-        sceneLabel.setFont(new java.awt.Font("Algerian", 0, 18)); // NOI18N
-        sceneLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        sceneLabel.setText("---Scene 1---");
-        sceneLabel.setToolTipText("");
-        mainPanel.add(sceneLabel);
-        sceneLabel.setBounds(220, 160, 170, 20);
-
-        lineNumberLabel.setFont(new java.awt.Font("Algerian", 0, 18)); // NOI18N
-        lineNumberLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lineNumberLabel.setText("14-15");
-        mainPanel.add(lineNumberLabel);
-        lineNumberLabel.setBounds(330, 160, 230, 19);
-
-        passageLabel.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
-        passageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        passageLabel.setText("<html>The passage will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank.<html>");
-        passageLabel.setToolTipText("");
-        mainPanel.add(passageLabel);
-        passageLabel.setBounds(240, 240, 300, 330);
-
-        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Scroll_v2.png"))); // NOI18N
-        mainPanel.add(backgroundLabel);
-        backgroundLabel.setBounds(137, 0, 506, 751);
-
-        roseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/rose.png"))); // NOI18N
-        mainPanel.add(roseLabel);
-        roseLabel.setBounds(570, 110, 430, 198);
-
-        knifeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/knife.png"))); // NOI18N
-        knifeLabel.setText("jLabel1");
-        mainPanel.add(knifeLabel);
-        knifeLabel.setBounds(40, 310, 220, 290);
-
-        backButton.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 14)); // NOI18N
-        backButton.setText("< Back");
-        backButton.setOpaque(false);
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-        mainPanel.add(backButton);
-        backButton.setBounds(10, 10, 90, 50);
+        mainPanel.add(navigationPanel);
+        navigationPanel.setBounds(810, 320, 320, 300);
 
         getContentPane().add(mainPanel);
-        mainPanel.setBounds(0, -1, 1130, 760);
+        mainPanel.setBounds(0, -1, 1130, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -390,16 +407,63 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     int totalNumberOfQuotes = 0; // Used to keep track of how many quotes there are
     int quoteIndex = 0; // Used to keep track of the current quote
     String answer; // Used to keep track of the correct answer
-    int[] previousQuoteIndexArray; // Used to keep track of quotes already used
+    ArrayList <Integer> previousQuoteIndexArray = new ArrayList(); // Used to keep track of quotes already used
     ArrayList <JSONObject> quotesList = new ArrayList(); // Used to hold all the quotes
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 
+        // Set custom fonts
+        try {
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            
+            // Load Old English from resources
+            Font englishFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/OLDENGL.TTF"));
+            ge.registerFont(englishFontFace);
+            actLabel.setFont(englishFontFace.deriveFont(Font.PLAIN, 30f));
+            sceneLabel.setFont(englishFontFace.deriveFont(Font.PLAIN, 16f));
+            lineNumberLabel.setFont(englishFontFace.deriveFont(Font.PLAIN, 16f));
+            
+            // Load Matura Script font from resources
+            Font maturaFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/MATURASC.TTF"));
+            ge.registerFont(maturaFontFace);
+            tabbedPane.setFont(maturaFontFace.deriveFont(Font.PLAIN, 18f));
+            questionLabel.setFont(maturaFontFace.deriveFont(Font.PLAIN, 18f));
+            checkButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            stuckLabel.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            rescueButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            answerLabel.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            youAreViewingLabel.setFont(maturaFontFace.deriveFont(Font.PLAIN, 18f));
+            quoteIndexTextField.setFont(maturaFontFace.deriveFont(Font.PLAIN, 24f));
+            totalNumberLabel.setFont(maturaFontFace.deriveFont(Font.PLAIN, 36f));
+            goButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 24f));
+            randomButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 18f));
+            previousButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            nextButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            backButton.setFont(maturaFontFace.deriveFont(Font.PLAIN, 14f));
+            
+            // Load Corsova font from resources
+            Font corsovaFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/MTCORSVA.TTF"));
+            ge.registerFont(corsovaFontFace);
+            clueLabel.setFont(corsovaFontFace.deriveFont(Font.PLAIN, 18f));
+            passageLabel.setFont(corsovaFontFace.deriveFont(Font.PLAIN, 18f));
+            examplesLabel.setFont(corsovaFontFace.deriveFont(Font.PLAIN, 18f));
+            commentsLabel.setFont(corsovaFontFace.deriveFont(Font.PLAIN, 14f));
+            
+            // Load Imprint font from resources
+            Font imprintFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/IMPRISHA.TTF"));
+            ge.registerFont(imprintFontFace);
+            quoteTopLabel.setFont(imprintFontFace.deriveFont(Font.PLAIN, 48f));
+            quoteBottomLabel.setFont(imprintFontFace.deriveFont(Font.PLAIN, 48f));
+        } catch (FontFormatException ex) {
+            Logger.getLogger(RomeoAndJuliet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(RomeoAndJuliet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         JSONParser parser = new JSONParser();
         
         try {
             // This object is the result of parsing the JSON file at the relative filepath as defined above; the JSON file is in the Resources source package.
-            Object quoteObj = parser.parse(new InputStreamReader(getClass().getResourceAsStream("/Resources/db.json")));
-            System.out.println(getClass().getResourceAsStream("/Resources/db.json"));
+            Object quoteObj = parser.parse(new InputStreamReader(getClass().getResourceAsStream("/Resources/Files/db.json")));
             
             // This casts the object to a JSONObject for future manipulation
             JSONObject jsonObject = (JSONObject) quoteObj;
@@ -434,7 +498,8 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
             answerToCheck = answerTextField.getText(); // Get the text from the text entry field
             System.out.println(answerToCheck);
             if (!answerTextField.getText().equals("")) { // User has entered a valid string
-                answerToCheck = answerToCheck.substring(0, 1).toUpperCase() + answerToCheck.substring(1).toLowerCase();
+                answerToCheck = answerToCheck.substring(0).toLowerCase(); // Convert to all lowercase
+                answer = answer.substring(0).toLowerCase(); // Convert to all lowercase
                 if (answer.contains(answerToCheck)) { // User was correct, show on button
                     checkButton.setText("Correct!");
                     checkButton.setBackground(Color.green);
@@ -456,15 +521,19 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
 
     // This shows the answer if the user is really desperate and clicks this button
     private void rescueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rescueButtonActionPerformed
-        answerLabel.setText("<html>" + answer + "</html>");
+        answerLabel.setText("<html>" + (String)quotesList.get(quoteIndex - 1).get("Literary Device") + "</html>");
         answerLabel.setVisible(true);
     }//GEN-LAST:event_rescueButtonActionPerformed
 
     // This loads the quote at the index of whatever number the user entered
     private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
         try {
-            quoteIndex = Integer.parseInt(quoteIndexTextField.getText());
-            generateQuote(quoteIndex);
+            if (Integer.parseInt(quoteIndexTextField.getText()) <= totalNumberOfQuotes && Integer.parseInt(quoteIndexTextField.getText()) >= 1) {
+                quoteIndex = Integer.parseInt(quoteIndexTextField.getText());
+                generateQuote(quoteIndex);
+            } else {
+                JOptionPane.showMessageDialog(null, "Whatever number you entered isn't valid. Try again!", "Uh oh!", JOptionPane.ERROR_MESSAGE);
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Whatever number you entered isn't valid. Try again!", "Uh oh!", JOptionPane.ERROR_MESSAGE);
         }
@@ -495,6 +564,22 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         quoteIndex = rand.nextInt(quotesList.size()) + 1;
         System.out.println(quoteIndex);
         
+        // Prevent generating the same index as previously used
+        if (previousQuoteIndexArray.size() > totalNumberOfQuotes) {
+            previousQuoteIndexArray.clear();
+        }
+        
+        while (previousQuoteIndexArray.size() < totalNumberOfQuotes && previousQuoteIndexArray.indexOf(quoteIndex) != -1) {
+            System.out.println("The quote was regenerated and the previous index was at " + previousQuoteIndexArray.indexOf(quoteIndex));
+            quoteIndex = rand.nextInt(quotesList.size()) + 1;
+        }
+        
+        // For logging
+//        System.out.println(previousQuoteIndexArray.size());
+//        for (int i = 0; i < previousQuoteIndexArray.size(); i++) {
+//            System.out.println("The item #" + i + " is " + previousQuoteIndexArray.get(i));
+//        }
+        
         // Show the new quote
         generateQuote(quoteIndex);
     }//GEN-LAST:event_randomButtonActionPerformed
@@ -504,8 +589,21 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         this.setVisible(false);
         new MainMenu().setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
+    
+    // Set the enter key to go to question rather than checking when user clicks on this section
+    private void quoteIndexTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quoteIndexTextFieldMouseClicked
+        getRootPane().setDefaultButton(goButton);
+    }//GEN-LAST:event_quoteIndexTextFieldMouseClicked
 
+    // Set the enter key to check when user clicks on textfield to enter text
+    private void answerTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerTextFieldMouseClicked
+        getRootPane().setDefaultButton(checkButton);
+    }//GEN-LAST:event_answerTextFieldMouseClicked
+    
     private void generateQuote(int index) {
+        // Add this index to the list of indices already used
+        previousQuoteIndexArray.add(index);
+        
         // Hide any previous rescue hints
         answerLabel.setVisible(false);
         
@@ -514,6 +612,9 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         checkButton.setText("Check");
         checkButton.setForeground(Color.BLACK);
         
+        // Reset text field
+        answerTextField.setText("");
+        
         // Set comments, clue, and related numbers
         commentsLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Comment") + "</html>");
         clueLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Hint") + "</html>");
@@ -521,11 +622,11 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         
         // Set the location of the quote
         actLabel.setText("<html>--- Act: " + (String)quotesList.get(index - 1).get("Act") + " ---</html>"); // Set the Act #
-        sceneLabel.setText("<html>--- Scene " + (String)quotesList.get(index - 1).get("Scene") + " ---</html>"); // Set the Scene #
+        sceneLabel.setText("<html>--- Scene " + (String)quotesList.get(index - 1).get("Scene") + "</html>"); // Set the Scene #
         if (((String)quotesList.get(index - 1).get("Line Number")).contains("-")) { // Set the Line #
-            lineNumberLabel.setText("<html>--- Lines " + (String)quotesList.get(index - 1).get("Line Number") + " ---</html>"); // This means that there are multiple lines
+            lineNumberLabel.setText("<html>Lines " + (String)quotesList.get(index - 1).get("Line Number") + " ---</html>"); // This means that there are multiple lines
         } else {
-            lineNumberLabel.setText("<html>--- Line " + (String)quotesList.get(index - 1).get("Line Number") + " ---</html>"); // This means that there is only one line
+            lineNumberLabel.setText("<html>Line " + (String)quotesList.get(index - 1).get("Line Number") + " ---</html>"); // This means that there is only one line
         }
 
         // Set main panel
@@ -559,6 +660,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         System.out.println("The quote is " + quotesList.get(quoteIndex - 1).get("Quote"));
         /*********************************************************************************************************************************** END OF LOGS */
     }
+    
     /**
      * @param args the command line arguments
      */

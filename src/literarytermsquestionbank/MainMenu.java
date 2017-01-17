@@ -38,9 +38,6 @@ public class MainMenu extends javax.swing.JFrame {
         underConstructionNote1 = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         shortStoriesLabel = new javax.swing.JLabel();
-        underConstructionNote = new javax.swing.JLabel();
-        underConstructionNote2 = new javax.swing.JLabel();
-        underConstructionNote3 = new javax.swing.JLabel();
         RomeoAndJulietLabel = new javax.swing.JLabel();
         ChristmasCarolLabel = new javax.swing.JLabel();
         listLabel = new javax.swing.JLabel();
@@ -52,6 +49,7 @@ public class MainMenu extends javax.swing.JFrame {
         underConstructionNote1.setText("Under construction!");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Literary Terms Practice Bank");
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 1118, 800));
         setResizable(false);
@@ -70,19 +68,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         mainPanel.add(shortStoriesLabel);
-        shortStoriesLabel.setBounds(60, 20, 160, 580);
-
-        underConstructionNote.setText("Under construction!");
-        mainPanel.add(underConstructionNote);
-        underConstructionNote.setBounds(880, 490, 100, 14);
-
-        underConstructionNote2.setText("Under construction!");
-        mainPanel.add(underConstructionNote2);
-        underConstructionNote2.setBounds(90, 460, 100, 14);
-
-        underConstructionNote3.setText("Under construction!");
-        mainPanel.add(underConstructionNote3);
-        underConstructionNote3.setBounds(510, 440, 100, 14);
+        shortStoriesLabel.setBounds(60, 30, 110, 430);
 
         RomeoAndJulietLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,7 +79,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         mainPanel.add(RomeoAndJulietLabel);
-        RomeoAndJulietLabel.setBounds(220, 130, 130, 470);
+        RomeoAndJulietLabel.setBounds(170, 110, 100, 350);
 
         ChristmasCarolLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -104,7 +90,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         mainPanel.add(ChristmasCarolLabel);
-        ChristmasCarolLabel.setBounds(490, 40, 130, 560);
+        ChristmasCarolLabel.setBounds(380, 40, 90, 420);
 
         listLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         listLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,7 +102,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         mainPanel.add(listLabel);
-        listLabel.setBounds(790, 40, 70, 560);
+        listLabel.setBounds(610, 40, 40, 420);
 
         helpLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -124,37 +110,35 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         mainPanel.add(helpLabel);
-        helpLabel.setBounds(860, 130, 130, 470);
+        helpLabel.setBounds(660, 110, 90, 350);
 
-        creditsLabel.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
-        creditsLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        creditsLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        creditsLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         creditsLabel.setText("<html><em>Made by Aaron Tan</em></html>");
         creditsLabel.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         mainPanel.add(creditsLabel);
-        creditsLabel.setBounds(920, 620, 70, 10);
+        creditsLabel.setBounds(600, 480, 140, 30);
 
-        titleLabel.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        titleLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         titleLabel.setText("<html><em>Literary Terms Practice Bank</em></html>");
         titleLabel.setToolTipText("");
         mainPanel.add(titleLabel);
-        titleLabel.setBounds(40, 610, 940, 80);
+        titleLabel.setBounds(60, 460, 940, 80);
 
-        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/BookShelf_w_Titles_v2.png"))); // NOI18N
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/BookShelf_w_Titles_v3.png"))); // NOI18N
         mainPanel.add(backgroundImage);
-        backgroundImage.setBounds(30, 20, 990, 800);
+        backgroundImage.setBounds(30, 20, 800, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 825, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 664, Short.MAX_VALUE)
         );
 
         pack();
@@ -201,7 +185,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void listLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listLabelMouseClicked
         try {
             // This app gets the file located at the filepath
-            String inputPDF = "Resources/LiteraryTermsList.pdf";
+            String inputPDF = "Resources/Files/LiteraryTermsList.pdf";
             InputStream literaryDevicesAsStream = getClass().getClassLoader().getResourceAsStream(inputPDF);
             Path tempOutput = Files.createTempFile("TempList", ".pdf");
             tempOutput.toFile().deleteOnExit();
@@ -259,10 +243,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel shortStoriesLabel;
     private javax.swing.JLabel titleLabel;
-    private javax.swing.JLabel underConstructionNote;
     private javax.swing.JLabel underConstructionNote1;
-    private javax.swing.JLabel underConstructionNote2;
-    private javax.swing.JLabel underConstructionNote3;
     // End of variables declaration//GEN-END:variables
 
 }
