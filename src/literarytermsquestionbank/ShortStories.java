@@ -48,6 +48,7 @@ public class ShortStories extends javax.swing.JFrame {
         secondaryPanel = new javax.swing.JPanel();
         tabbedPane = new javax.swing.JTabbedPane();
         answerTabPanel = new javax.swing.JPanel();
+        menuTitleLabel = new javax.swing.JLabel();
         questionLabel = new javax.swing.JLabel();
         answerTextField = new javax.swing.JTextField();
         checkButton = new javax.swing.JButton();
@@ -61,7 +62,6 @@ public class ShortStories extends javax.swing.JFrame {
         commentsLabel = new javax.swing.JLabel();
         exampleTabPabel = new javax.swing.JPanel();
         examplesLabel = new javax.swing.JLabel();
-        menuTitleLabel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         backButton = new javax.swing.JButton();
         navigationPanel = new javax.swing.JPanel();
@@ -102,9 +102,14 @@ public class ShortStories extends javax.swing.JFrame {
         tabbedPane.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         tabbedPane.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
 
+        menuTitleLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        menuTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        menuTitleLabel.setText("~Menu~");
+
         questionLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         questionLabel.setText("What literary device is this?");
+        questionLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         answerTextField.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         answerTextField.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,6 +120,7 @@ public class ShortStories extends javax.swing.JFrame {
 
         checkButton.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         checkButton.setText("Check answer");
+        checkButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkButtonActionPerformed(evt);
@@ -122,6 +128,7 @@ public class ShortStories extends javax.swing.JFrame {
         });
 
         stuckLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        stuckLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stuckLabel.setText("Completely stuck?");
 
         rescueButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
@@ -139,34 +146,56 @@ public class ShortStories extends javax.swing.JFrame {
         answerTabPanel.setLayout(answerTabPanelLayout);
         answerTabPanelLayout.setHorizontalGroup(
             answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
+                .addGap(0, 20, Short.MAX_VALUE)
+                .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(answerTabPanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(answerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(stuckLabel, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(rescueButton, javax.swing.GroupLayout.Alignment.CENTER)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(answerTabPanelLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(rescueButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(answerTabPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(answerLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(stuckLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
+            .addGroup(answerTabPanelLayout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
+            .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menuTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         answerTabPanelLayout.setVerticalGroup(
             answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(answerTabPanelLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(questionLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(59, 59, 59)
                 .addComponent(stuckLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rescueButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(answerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menuTitleLabel)
+                    .addContainerGap(354, Short.MAX_VALUE)))
         );
 
         tabbedPane.addTab("Answer", answerTabPanel);
@@ -186,7 +215,7 @@ public class ShortStories extends javax.swing.JFrame {
             clueTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clueTabPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(clueTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+                .addComponent(clueTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(clueTabPanelLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
@@ -200,7 +229,7 @@ public class ShortStories extends javax.swing.JFrame {
                 .addComponent(clueTitleLabel)
                 .addGap(18, 18, 18)
                 .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("Clue", clueTabPanel);
@@ -217,7 +246,7 @@ public class ShortStories extends javax.swing.JFrame {
             .addGroup(commentsTabPanelLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         commentsTabPanelLayout.setVerticalGroup(
             commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,7 +270,7 @@ public class ShortStories extends javax.swing.JFrame {
             .addGroup(exampleTabPabelLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         exampleTabPabelLayout.setVerticalGroup(
             exampleTabPabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,34 +282,21 @@ public class ShortStories extends javax.swing.JFrame {
 
         tabbedPane.addTab("More Examples", exampleTabPabel);
 
-        menuTitleLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
-        menuTitleLabel.setText("~Menu~");
-
         javax.swing.GroupLayout secondaryPanelLayout = new javax.swing.GroupLayout(secondaryPanel);
         secondaryPanel.setLayout(secondaryPanelLayout);
         secondaryPanelLayout.setHorizontalGroup(
             secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(secondaryPanelLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(menuTitleLabel)
-                .addContainerGap(177, Short.MAX_VALUE))
-            .addGroup(secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(secondaryPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tabbedPane)
-                    .addContainerGap()))
+                .addContainerGap()
+                .addComponent(tabbedPane)
+                .addContainerGap())
         );
         secondaryPanelLayout.setVerticalGroup(
             secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(secondaryPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(menuTitleLabel)
-                .addContainerGap(425, Short.MAX_VALUE))
-            .addGroup(secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, secondaryPanelLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(33, 33, 33)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, secondaryPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
 
         getContentPane().add(secondaryPanel);
@@ -310,7 +326,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(previousButton);
-        previousButton.setBounds(540, 40, 89, 40);
+        previousButton.setBounds(519, 40, 110, 40);
 
         nextButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         nextButton.setText("Next");
@@ -320,7 +336,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(nextButton);
-        nextButton.setBounds(640, 40, 65, 40);
+        nextButton.setBounds(640, 40, 69, 40);
 
         youAreViewingLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -331,7 +347,7 @@ public class ShortStories extends javax.swing.JFrame {
         totalNumberLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         totalNumberLabel.setText("of 106");
         navigationPanel.add(totalNumberLabel);
-        totalNumberLabel.setBounds(120, 50, 100, 46);
+        totalNumberLabel.setBounds(120, 50, 100, 47);
 
         quoteIndexTextField.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -350,7 +366,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(goButton);
-        goButton.setBounds(210, 40, 57, 40);
+        goButton.setBounds(210, 40, 63, 40);
 
         randomButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         randomButton.setText("Random!");
@@ -370,7 +386,7 @@ public class ShortStories extends javax.swing.JFrame {
         quoteTopLabel.setText("\"");
         quoteTopLabel.setToolTipText("");
         mainPanel.add(quoteTopLabel);
-        quoteTopLabel.setBounds(770, 120, 50, 50);
+        quoteTopLabel.setBounds(770, 100, 50, 50);
 
         quoteBottomLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
         quoteBottomLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -383,7 +399,7 @@ public class ShortStories extends javax.swing.JFrame {
         storyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         storyLabel.setText("~Gore~");
         mainPanel.add(storyLabel);
-        storyLabel.setBounds(650, 80, 290, 24);
+        storyLabel.setBounds(650, 70, 290, 24);
 
         passageLabel.setBackground(new java.awt.Color(255, 255, 255));
         passageLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
@@ -448,9 +464,9 @@ public class ShortStories extends javax.swing.JFrame {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             
             // Load Great Vibes from resources
-            Font greatVibesFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/GreatVibes-Regular.TTF"));
+            Font greatVibesFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/GVIBES.TTF"));
             ge.registerFont(greatVibesFontFace);
-            questionLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
+            questionLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
             checkButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
             stuckLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
             rescueButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
@@ -463,10 +479,13 @@ public class ShortStories extends javax.swing.JFrame {
             previousButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
             nextButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
             backButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
-            clueLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
-            passageLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
-            examplesLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
-            commentsLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            clueLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
+            passageLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
+            examplesLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
+            commentsLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
+            storyLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 20f));
+            tabbedPane.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            menuTitleLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
             
             // Load and set Imprint font face
             Font imprintFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/IMPRISHA.TTF"));
