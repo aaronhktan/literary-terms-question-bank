@@ -6,6 +6,8 @@
 
 package literarytermsquestionbank;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author Aaron
@@ -15,6 +17,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
     /** Creates new form AChristmasCarol */
     public AChristmasCarol() {
         initComponents();
+        this.setLocationRelativeTo(null); // Put window in middle of screen
     }
 
     /** This method is called from within the constructor to
@@ -52,9 +55,15 @@ public class AChristmasCarol extends javax.swing.JFrame {
         exampleLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("A Christmas Carol");
         setBounds(new java.awt.Rectangle(0, 0, 1140, 760));
         setMinimumSize(new java.awt.Dimension(1140, 790));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         mainPanel.setBackground(new java.awt.Color(199, 255, 255));
@@ -252,6 +261,11 @@ public class AChristmasCarol extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // Set window icon
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Resources/Images/book-icon_acc.png")));
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments

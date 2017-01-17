@@ -1166,5 +1166,331 @@
       "Number": "105",
       "Related": "36, 43, 49, 90"
     }
+  ],
+  "Short Stories": [
+    {
+      "Literary Device": "Simile",
+      "Quote": "They often feel like two halves of the same person.",
+      "Short Story": "Gore",
+      "Comment": "No comment available.",
+      "Hint": "This is a comparison, with the word \"like\".",
+      "Number": "0",
+      "Related": "4, 13, 18, 20, 27, 32"
+    },
+    {
+      "Literary Device": "Colloquialism",
+      "Quote": "Horse patooties.",
+      "Short Story": "Gore",
+      "Comment": "This would not be acceptable in formal writing, such as an essay.",
+      "Hint": "Is this formal written vocabulary? (It's not!)",
+      "Number": "1",
+      "Related": "12, 19, 29"
+    },
+    {
+      "Literary Device": "Hyperbole",
+      "Quote": "I have been forced to take up psychological warfare.",
+      "Short Story": "Gore",
+      "Comment": "Because this is exaggerating the relationship between Lucas and Amy, this is hyperbole.",
+      "Hint": "Even if siblings often feel like they're in a \"psychological war\", they're usually blowing it out of proportion.",
+      "Number": "2",
+      "Related": "9, 22, 25"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "It was a heavy wet noise, like the sound of a big piece of raw meat being flung to the floow.",
+      "Short Story": "Gore",
+      "Comment": "No comment available.",
+      "Hint": "This is a comparison, with the word \"like\".",
+      "Number": "3",
+      "Related": "1, 13, 18, 20, 27, 32"
+    },
+    {
+      "Literary Device": "Metonymy",
+      "Quote": "The peace-keeping forces are out at Mega-Foods doing the Saturday shop.",
+      "Short Story": "Gore",
+      "Comment": "Because parents are being replaced by the word \"peace-keepers\", this is metonymy. ",
+      "Hint": "\"The peace-keepers\" refers to the parents, and \"Saturday shop\" refers to them doing shopping. What is substituting words for others called?",
+      "Number": "4",
+      "Related": "16"
+    },
+    {
+      "Literary Device": "Contrast",
+      "Quote": "The carrot or the stick?",
+      "Short Story": "Gore",
+      "Comment": "The carrot and the stick contrast each other (they're different methods of dealing with a situation).",
+      "Hint": "The \"carrot\" and the \"stick\" are opposites put together for clarity.",
+      "Number": "5",
+      "Related": "7, 24"
+    },
+    {
+      "Literary Device": "Contrast",
+      "Quote": "The chocolate cheesecake or the Uzi?",
+      "Short Story": "Gore",
+      "Comment": "These opposites create contrast.",
+      "Hint": "The chocolate cake and the Uzi are very clearly opposite meanings and are put together for clarity and to emphasize each other.",
+      "Number": "6",
+      "Related": "6, 24"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "I could try the chocolate cheesecake of bribery.",
+      "Short Story": "Gore",
+      "Comment": "No comparison words = metaphor.",
+      "Hint": "Amy compares \"false bribery\" to \"chocolate cake\", without any comparison words.",
+      "Number": "7",
+      "Related": "10, 15, 22, 26"
+    },
+    {
+      "Literary Device": "Hyperbole",
+      "Quote": "...Lucas' sins, crimes, misdemeanors, and shady dealings.",
+      "Short Story": "Gore",
+      "Comment": "Amy blows Lucas' actions out of proportion. This makes it hyperbole.",
+      "Hint": "The worst things Lucas has done are bring a rabbit in the house and photocopy his bum. Are those as bad as \"sins\", \"crimes\", and \"shady dealings\"?",
+      "Number": "8",
+      "Related": "3, 22, 25"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "I am a stealth bomber with no aviation fuel.",
+      "Short Story": "Gore",
+      "Comment": "A comparison with no comparison words is a metaphor. This has no comparison words.",
+      "Hint": "Amy says she is a \"stealth bomber with no aviation fuel\". She is clearly not that - which makes this a comparison.",
+      "Number": "9",
+      "Related": "8, 15, 22, 26"
+    },
+    {
+      "Literary Device": "Foreshadowing",
+      "Quote": "Not quite.",
+      "Short Story": "Gore",
+      "Comment": "We know later that her \"three figures\" are an elaborate ruse to trick Lucas, and this sentence tells the reader of that (even if they don't pick up on it the first time).",
+      "Hint": "Amy hints that she has nothing left up her sleeve, except for one thing. Right when the \"three hooded figures\" show up.",
+      "Number": "10",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Colloquialism",
+      "Quote": "You're toast.",
+      "Short Story": "Gore",
+      "Comment": "Informal language is colloquialism!",
+      "Hint": "\"You're toast\" is informal language that would not be used in formal writing.",
+      "Number": "11",
+      "Related": "2, 19, 29"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "It rolls into the hall like a huge wave, breaking over my head, fowing into my mouth and nose until it becomes a taste.",
+      "Short Story": "Gore",
+      "Comment": "Comparison with the word \"like\" is a simile.",
+      "Hint": "Amy compares the smell of the strangers to water, using the structure \"like...\".",
+      "Number": "12",
+      "Related": "1, 4, 18, 20, 27, 32"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "Very dramatic, Lady Macbeth.",
+      "Short Story": "Gore",
+      "Comment": "Talking about characters outside of the story is allusion.",
+      "Hint": "Lucas, for a knobhead, knows surprisingly much about Shakespeare's characters!",
+      "Number": "13",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "Each word is a little island of sound, a pebble dropped into a pool.",
+      "Short Story": "Gore",
+      "Comment": "No comment available.",
+      "Hint": "Amy compares words to a \"pebble dropped in a pool\", without using any comparison words.",
+      "Number": "14",
+      "Related": "8, 10, 22, 26"
+    },
+    {
+      "Literary Device": "Metonymy",
+      "Quote": "R. L. Tankard is sitting on the back of the toilet.",
+      "Short Story": "Gore",
+      "Comment": "No comment available.",
+      "Hint": "\"R. L. Tankard\" refers to the book written by R. L. Tankard. This substitutes the book with the author, which is not part of the book.",
+      "Number": "15",
+      "Related": "5"
+    },
+    {
+      "Literary Device": "Onomatopoeia",
+      "Quote": "Beep, beep, beep. ",
+      "Short Story": "Gore",
+      "Comment": "A sound transcribed into a word is an onomatopoeia.",
+      "Hint": "This imitates the sound that the telephone makes.",
+      "Number": "16",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "She loved ... to feel—almost as a sunbather feels the sun...",
+      "Short Story": "Lamb to the Slaughter",
+      "Comment": "No comment available.",
+      "Hint": "Mary Maloney compares sitting with her husband to feeling like a sunbather, with the comparison word \"as\".",
+      "Number": "17",
+      "Related": "1, 4, 13, 20, 27, 32"
+    },
+    {
+      "Literary Device": "Colloquialism",
+      "Quote": "For God's sake.",
+      "Short Story": "Lamb to the Slaughter",
+      "Comment": "This expression would be acceptable in everyday speech, but not in formal writing. This makes it a colloquialism.",
+      "Hint": "Would you use this if you were to hand in an essay to for an English assignment?",
+      "Number": "18",
+      "Related": "2, 12, 29"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "The doc says his skull was smashed all to pieces just like from a sledgehammer.",
+      "Short Story": "Lamb to the Slaughter",
+      "Comment": "No comment available.",
+      "Hint": "One of the policemen compares the blow that killed Patrick Maloney to that of a sledgehammer, using the word \"like\".",
+      "Number": "19",
+      "Related": "1, 4, 13, 18, 27, 32"
+    },
+    {
+      "Literary Device": "Dramatic Irony",
+      "Quote": "Probably right under our very noses.",
+      "Short Story": "Lamb to the Slaughter",
+      "Comment": "Because this is spoken by a character, who does not understand what he is saying, and the reader knows that the murder weapon (the lamb being eaten) is literally under their noses, this makes this example dramatic irony.",
+      "Hint": "One of the police officers says this, speaking about the murder weapon. He does not know that it is literally \"under [their] noses\".",
+      "Number": "20",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Hyperbole, Metaphor",
+      "Quote": "As boys they had thirsted for one another's blood...",
+      "Short Story": "The Interlopers",
+      "Comment": "Because this exaggerates the extend of the feud, it is an example of hyperbole. Because it also uses \"thirsting for each other's blood\" in a figurative way, this is also a metaphor.",
+      "Hint": "As children, do they really \"thirst\" for each other's blood? Is this literal, or figurative? Also, is the extent of their feud really that deep?",
+      "Number": "21",
+      "Related": "3, 8, 9, 10, 15, 22, 25, 26"
+    },
+    {
+      "Literary Device": "Alliteration",
+      "Quote": "Each had hate in his heart...",
+      "Short Story": "The Interlopers",
+      "Comment": "Because \"had\", \"hate\", and \"heart\" all start with the leter h, this is an example of alliteration.",
+      "Hint": "Check out the first letter of these words.",
+      "Number": "22",
+      "Related": "31, 35"
+    },
+    {
+      "Literary Device": "Juxtaposition, Contrast",
+      "Quote": "A strange medley of pious thank-offerings and sharp curses...",
+      "Short Story": "The Interlopers",
+      "Comment": "This is both juxtaposition (the fact that the two are placed together), and contrast (the effect that this creates).",
+      "Hint": "These two things (\"thank-offerings\" and \"curses\") are opposites of each other, yet they are placed very close to each other to emphasise the differences.",
+      "Number": "23",
+      "Related": "24"
+    },
+    {
+      "Literary Device": "Hyperbole",
+      "Quote": "Other men, like Mr. Wills, can throw seed on the ground, scuff dirt over it, walk off and leave it, and have a crop of the prettiest, biggest melons you ever saw.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "He's exaggerating about Mr. Wills' farming abilities. This makes it hyperbole.",
+      "Hint": "Is this really a case or is the main character exaggerating a bit?",
+      "Number": "24",
+      "Related": "3, 9, 22"
+    },
+    {
+      "Literary Device": "Metaphor",
+      "Quote": "She was a wraith of a woman...",
+      "Short Story": "The Taste of Melon",
+      "Comment": "No comparison words = metaphor.",
+      "Hint": "Mrs. Wills is being compared to a wraith (a ghost, i.e. she's very weak and unhealthy). Are there comparison words?",
+      "Number": "25",
+      "Related": "8, 10, 15, 22"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "...[Mrs. Wills was] pale as a button bean.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "Comparison words (as... as...), so this is a simile.",
+      "Hint": "The main character compares Mrs. Wills to being as pale as a butter-bean. Are there comparison words?",
+      "Number": "26",
+      "Related": "1, 4, 13, 18, 20, 32"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "That big old moon sailed serenely overhead, climbing higher into the sky...",
+      "Short Story": "The Taste of Melon",
+      "Comment": "Giving human attributes to objects is personification; in this passage, the moon is given the ability to do human things like sailing and climbing.",
+      "Hint": "This sentence makes the moon seem like it could be a human being (\"sailed serenely\", \"climbing\"...). What type of literary device gives things human attributes?",
+      "Number": "27",
+      "Related": "36"
+    },
+    {
+      "Literary Device": "Colloquialism",
+      "Quote": "\"Shucks ... he ain't got buckshot in that gun.\"",
+      "Short Story": "The Taste of Melon",
+      "Comment": "These words (\"shucks\", \"ain't\") are not formal words, and make this colloquialisms.",
+      "Hint": "Would any of this pass in a formal writing assignment? I think not.",
+      "Number": "28",
+      "Related": "2, 12, 19"
+    },
+    {
+      "Literary Device": "Imagery",
+      "Quote": "I could taste the sweet red juices oozing over my tongue, feel the delicate threaded redness of the heart as I squeezed the juices out of it.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "The words that the author uses creates vivid imagery (\"sweet red juices oozing over my tongue\", \"threaded redness\", etc.).",
+      "Hint": "What type of picture does this paint in your mind? Does the choice of words help you imagine what the protagonist is thinking about?",
+      "Number": "29",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Alliteration",
+      "Quote": "The meat muddied on the ground, the seed scattered.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "The first alliteration starts with \"m\" (\"meat\", \"muddied\"). The second starts witht he letter \"s\" (\"seed\", \"scattered\").",
+      "Hint": "Look at the first letters of the words.",
+      "Number": "30",
+      "Related": "23, 35"
+    },
+    {
+      "Literary Device": "SImile",
+      "Quote": "It chilled me deep down ... like the cry of a wild animal.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "No comment available.",
+      "Hint": "Mr. Wills, upon having discovered the theft of the melon, gets super angry. The protagonist hears his scream of frustration and compares it with the word \"like\".",
+      "Number": "31",
+      "Related": "1, 4, 13, 18, 20, 27"
+    },
+    {
+      "Literary Device": "Oxymoron",
+      "Quote": "...crying in such strength.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "The fact that crying and strength are seemingy incongruous things makes this an oxymoron.",
+      "Hint": "It seems oppositional in nature to have crying (which is a sign of weakness), as a sign of strength.",
+      "Number": "32",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Pathos",
+      "Quote": "Mrs. Wills has been poorly all spring, and she dearly loves the taste of melon for eating... Every day she would ask me if the great seed melon was ready yet.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "Feeling sad (or more speficially, pity) is pathos. Here, the thing Mr. Wills has been working for has been destroyed, and it wasn't a selfish thing either. Poor guy.",
+      "Hint": "This passage is supposed to make you feel sorry for Mr. Wills. What is that type of literary device called?",
+      "Number": "33",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Alliteration",
+      "Quote": "... looking down at the wanton waste we had made...",
+      "Short Story": "The Taste of Melon",
+      "Comment": "The alliteration in this passage serves to underline the \"wanton waste\" (the deliberate and unprovoked waste) that the protagonist wrought on the seed melon.",
+      "Hint": "Check out the \"w\"s in this sentence.",
+      "Number": "34",
+      "Related": "23, 31"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "Her eyes were smiling too.",
+      "Short Story": "The Taste of Melon",
+      "Comment": "By describing her eyes as \"smiling\", the author gives the eyes human abilities (i.e. to smile).",
+      "Hint": "Eyes cannot smile. That would be creepy.",
+      "Number": "35",
+      "Related": "28"
+    }
   ]
 }

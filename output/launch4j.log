@@ -1,0 +1,78 @@
+
+
+Version:	3.9
+CmdLine:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe --l4j-debug
+WOW64:		yes
+Working dir:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\.
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_111
+Check launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe (OK)
+Match:		1.8.0_111
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6
+Ignore:		1.6
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_45
+Ignore:		1.6.0_045
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_101
+Ignore:		1.8.0_101
+Runtime used:	1.8.0_111 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
+Launcher args:	-jar "E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe"
+Args length:	106/32768 chars
+Exit code:	0
+
+
+Version:	3.9
+CmdLine:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe --l4j-debug
+WOW64:		yes
+Working dir:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\.
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_111
+Check launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe (OK)
+Match:		1.8.0_111
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6
+Ignore:		1.6
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_45
+Ignore:		1.6.0_045
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_101
+Ignore:		1.8.0_101
+Runtime used:	1.8.0_111 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
+Launcher args:	-jar "E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe"
+Args length:	106/32768 chars
+Exit code:	0
+
+
+Version:	3.9
+CmdLine:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe --l4j-debug
+WOW64:		yes
+Working dir:	E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\.
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_111
+Check launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe (OK)
+Match:		1.8.0_111
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6
+Ignore:		1.6
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_45
+Ignore:		1.6.0_045
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.8
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_101
+Ignore:		1.8.0_101
+Runtime used:	1.8.0_111 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
+Launcher args:	-jar "E:\Libraries\Documents\GitHub\literary-terms-question-bank\output\LiteraryTermsQuestionBank_win.exe"
+Args length:	106/32768 chars
+Exit code:	0

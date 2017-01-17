@@ -6,6 +6,24 @@
 
 package literarytermsquestionbank;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 /**
  *
  * @author Aaron
@@ -15,6 +33,7 @@ public class ShortStories extends javax.swing.JFrame {
     /** Creates new form ShortStories */
     public ShortStories() {
         initComponents();
+        this.setLocationRelativeTo(null); // Put window in middle of screen
     }
 
     /** This method is called from within the constructor to
@@ -26,22 +45,36 @@ public class ShortStories extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         secondaryPanel = new javax.swing.JPanel();
         tabbedPane = new javax.swing.JTabbedPane();
         answerTabPanel = new javax.swing.JPanel();
         questionLabel = new javax.swing.JLabel();
         answerTextField = new javax.swing.JTextField();
         checkButton = new javax.swing.JButton();
+        stuckLabel = new javax.swing.JLabel();
+        rescueButton = new javax.swing.JButton();
+        answerLabel = new javax.swing.JLabel();
         clueTabPanel = new javax.swing.JPanel();
         clueTitleLabel = new javax.swing.JLabel();
         clueLabel = new javax.swing.JLabel();
         commentsTabPanel = new javax.swing.JPanel();
-        commmentsLabel = new javax.swing.JLabel();
+        commentsLabel = new javax.swing.JLabel();
         exampleTabPabel = new javax.swing.JPanel();
         examplesLabel = new javax.swing.JLabel();
         menuTitleLabel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
+        navigationPanel = new javax.swing.JPanel();
+        previousButton = new javax.swing.JButton();
+        nextButton = new javax.swing.JButton();
+        youAreViewingLabel = new javax.swing.JLabel();
+        totalNumberLabel = new javax.swing.JLabel();
+        quoteIndexTextField = new javax.swing.JTextField();
+        goButton = new javax.swing.JButton();
+        randomButton = new javax.swing.JButton();
+        quoteTopLabel = new javax.swing.JLabel();
+        quoteBottomLabel = new javax.swing.JLabel();
+        storyLabel = new javax.swing.JLabel();
         passageLabel = new javax.swing.JLabel();
         lambLabel = new javax.swing.JLabel();
         mouseLabel = new javax.swing.JLabel();
@@ -51,50 +84,89 @@ public class ShortStories extends javax.swing.JFrame {
         plateLabel = new javax.swing.JLabel();
         tableclothLabel = new javax.swing.JLabel();
 
-        jButton1.setText("jButton1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1140, 800));
-        setPreferredSize(new java.awt.Dimension(1140, 800));
+        setTitle("Short Stories 9");
+        setMinimumSize(new java.awt.Dimension(1140, 675));
+        setPreferredSize(new java.awt.Dimension(1140, 675));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
-        secondaryPanel.setBackground(new java.awt.Color(216, 178, 150));
+        secondaryPanel.setBackground(new java.awt.Color(255, 204, 153));
         secondaryPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         tabbedPane.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
+        tabbedPane.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
 
         questionLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         questionLabel.setText("What literary device is this?");
 
         answerTextField.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        answerTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerTextFieldMouseClicked(evt);
+            }
+        });
 
         checkButton.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         checkButton.setText("Check answer");
+        checkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkButtonActionPerformed(evt);
+            }
+        });
+
+        stuckLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        stuckLabel.setText("Completely stuck?");
+
+        rescueButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        rescueButton.setText("Rescue Me");
+        rescueButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rescueButtonActionPerformed(evt);
+            }
+        });
+
+        answerLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        answerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout answerTabPanelLayout = new javax.swing.GroupLayout(answerTabPanel);
         answerTabPanel.setLayout(answerTabPanelLayout);
         answerTabPanelLayout.setHorizontalGroup(
             answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(answerTabPanelLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(32, 32, 32)
                 .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(questionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                    .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(answerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(stuckLabel, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(rescueButton, javax.swing.GroupLayout.Alignment.CENTER)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         answerTabPanelLayout.setVerticalGroup(
             answerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
-                .addContainerGap(108, Short.MAX_VALUE)
+            .addGroup(answerTabPanelLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
                 .addComponent(questionLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(answerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addComponent(checkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
+                .addGap(27, 27, 27)
+                .addComponent(stuckLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rescueButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(answerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("Answer", answerTabPanel);
@@ -128,15 +200,15 @@ public class ShortStories extends javax.swing.JFrame {
                 .addComponent(clueTitleLabel)
                 .addGap(18, 18, 18)
                 .addComponent(clueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("Clue", clueTabPanel);
 
-        commmentsLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
-        commmentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        commmentsLabel.setText("<html>Your comments will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf.</html>");
-        commmentsLabel.setToolTipText("");
+        commentsLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        commentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        commentsLabel.setText("<html>Your comments will appear here.<br><br>Bacon ipsum dolor amet hamburger doner ham tri-tip sirloin. Ham hock boudin flank, hamburger spare ribs beef ribs salami turkey brisket tri-tip fatback prosciutto. Shank picanha t-bone, capicola andouille filet mignon tri-tip bresaola frankfurter shankle rump landjaeger pancetta. Bresaola jowl sirloin, bacon capicola biltong porchetta swine flank. Shoulder tail leberkas salami meatloaf.</html>");
+        commentsLabel.setToolTipText("");
 
         javax.swing.GroupLayout commentsTabPanelLayout = new javax.swing.GroupLayout(commentsTabPanel);
         commentsTabPanel.setLayout(commentsTabPanelLayout);
@@ -144,15 +216,15 @@ public class ShortStories extends javax.swing.JFrame {
             commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commentsTabPanelLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(commmentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         commentsTabPanelLayout.setVerticalGroup(
             commentsTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commentsTabPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(commmentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addComponent(commentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("More Info", commentsTabPanel);
@@ -176,7 +248,7 @@ public class ShortStories extends javax.swing.JFrame {
             .addGroup(exampleTabPabelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(examplesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabbedPane.addTab("More Examples", exampleTabPabel);
@@ -203,18 +275,115 @@ public class ShortStories extends javax.swing.JFrame {
             .addGroup(secondaryPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(menuTitleLabel)
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
             .addGroup(secondaryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, secondaryPanelLayout.createSequentialGroup()
-                    .addContainerGap(40, Short.MAX_VALUE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(33, 33, 33)))
         );
 
         getContentPane().add(secondaryPanel);
-        secondaryPanel.setBounds(0, 290, 420, 500);
+        secondaryPanel.setBounds(0, 200, 420, 460);
 
         mainPanel.setLayout(null);
+
+        backButton.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        backButton.setText("< Back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        mainPanel.add(backButton);
+        backButton.setBounds(10, 10, 110, 40);
+
+        navigationPanel.setBackground(new java.awt.Color(255, 204, 153));
+        navigationPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        navigationPanel.setLayout(null);
+
+        previousButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        previousButton.setText("Previous");
+        previousButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                previousButtonActionPerformed(evt);
+            }
+        });
+        navigationPanel.add(previousButton);
+        previousButton.setBounds(540, 40, 89, 40);
+
+        nextButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        nextButton.setText("Next");
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+        navigationPanel.add(nextButton);
+        nextButton.setBounds(640, 40, 65, 40);
+
+        youAreViewingLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        youAreViewingLabel.setText("You are viewing");
+        navigationPanel.add(youAreViewingLabel);
+        youAreViewingLabel.setBounds(40, 20, 191, 24);
+
+        totalNumberLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
+        totalNumberLabel.setText("of 106");
+        navigationPanel.add(totalNumberLabel);
+        totalNumberLabel.setBounds(120, 50, 100, 46);
+
+        quoteIndexTextField.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quoteIndexTextFieldMouseClicked(evt);
+            }
+        });
+        navigationPanel.add(quoteIndexTextField);
+        quoteIndexTextField.setBounds(40, 50, 70, 30);
+
+        goButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        goButton.setText("Go!");
+        goButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goButtonActionPerformed(evt);
+            }
+        });
+        navigationPanel.add(goButton);
+        goButton.setBounds(210, 40, 57, 40);
+
+        randomButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        randomButton.setText("Random!");
+        randomButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                randomButtonActionPerformed(evt);
+            }
+        });
+        navigationPanel.add(randomButton);
+        randomButton.setBounds(350, 40, 120, 40);
+
+        mainPanel.add(navigationPanel);
+        navigationPanel.setBounds(420, 550, 720, 110);
+
+        quoteTopLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
+        quoteTopLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quoteTopLabel.setText("\"");
+        quoteTopLabel.setToolTipText("");
+        mainPanel.add(quoteTopLabel);
+        quoteTopLabel.setBounds(770, 120, 50, 50);
+
+        quoteBottomLabel.setFont(new java.awt.Font("Imprint MT Shadow", 0, 48)); // NOI18N
+        quoteBottomLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quoteBottomLabel.setText("\"");
+        quoteBottomLabel.setToolTipText("");
+        mainPanel.add(quoteBottomLabel);
+        quoteBottomLabel.setBounds(730, 440, 150, 50);
+
+        storyLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        storyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        storyLabel.setText("~Gore~");
+        mainPanel.add(storyLabel);
+        storyLabel.setBounds(650, 80, 290, 24);
 
         passageLabel.setBackground(new java.awt.Color(255, 255, 255));
         passageLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
@@ -222,43 +391,276 @@ public class ShortStories extends javax.swing.JFrame {
         passageLabel.setText("<html>Bacon ipsum dolor amet meatloaf ground round short loin flank, burgdoggen filet mignon biltong. Shankle rump spare ribs tongue turkey.</html>");
         passageLabel.setOpaque(true);
         mainPanel.add(passageLabel);
-        passageLabel.setBounds(640, 180, 320, 320);
+        passageLabel.setBounds(640, 120, 320, 320);
 
         lambLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/Lamb.png"))); // NOI18N
         mainPanel.add(lambLabel);
-        lambLabel.setBounds(40, -20, 420, 280);
+        lambLabel.setBounds(950, 370, 420, 280);
 
         mouseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/mouse.png"))); // NOI18N
         mainPanel.add(mouseLabel);
-        mouseLabel.setBounds(440, 530, 310, 270);
+        mouseLabel.setBounds(410, 360, 310, 270);
 
         watermelonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/watermelon.png"))); // NOI18N
         mainPanel.add(watermelonLabel);
-        watermelonLabel.setBounds(720, 470, 430, 390);
+        watermelonLabel.setBounds(0, -50, 430, 390);
 
         spoonLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/spoon.png"))); // NOI18N
         mainPanel.add(spoonLabel);
-        spoonLabel.setBounds(220, 20, 450, 460);
+        spoonLabel.setBounds(190, 0, 450, 460);
 
         forkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/fork.png"))); // NOI18N
         forkLabel.setToolTipText("");
         mainPanel.add(forkLabel);
-        forkLabel.setBounds(930, -50, 470, 580);
+        forkLabel.setBounds(950, -80, 470, 580);
 
         plateLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/plate.png"))); // NOI18N
         mainPanel.add(plateLabel);
-        plateLabel.setBounds(550, 80, 500, 510);
+        plateLabel.setBounds(550, 20, 500, 510);
 
         tableclothLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/tablecloth-texture.gif"))); // NOI18N
         mainPanel.add(tableclothLabel);
-        tableclothLabel.setBounds(-5, 1, 1150, 790);
+        tableclothLabel.setBounds(-5, 1, 1150, 660);
 
         getContentPane().add(mainPanel);
-        mainPanel.setBounds(0, 0, 1140, 790);
+        mainPanel.setBounds(0, 0, 1140, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // This returns the user to the main menu                                       
+        this.setVisible(false);
+        new MainMenu().setVisible(true);  
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    int totalNumberOfQuotes = 0; // Used to keep track of how many quotes there are
+    int quoteIndex = 0; // Used to keep track of the current quote
+    String answer; // Used to keep track of the correct answer
+    ArrayList <Integer> previousQuoteIndexArray = new ArrayList(); // Used to keep track of quotes already used
+    ArrayList <JSONObject> quotesList = new ArrayList(); // Used to hold all the quotes
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // Set window icon
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Resources/Images/book-icon_ss.png")));
+        
+        // Set custom fonts
+        try {
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            
+            // Load Great Vibes from resources
+            Font greatVibesFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/GreatVibes-Regular.TTF"));
+            ge.registerFont(greatVibesFontFace);
+            questionLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
+            checkButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
+            stuckLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            rescueButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            answerLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            youAreViewingLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            quoteIndexTextField.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            totalNumberLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
+            goButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            randomButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            previousButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            nextButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            backButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            clueLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            passageLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
+            examplesLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            commentsLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
+            
+            // Load and set Imprint font face
+            Font imprintFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/IMPRISHA.TTF"));
+            ge.registerFont(imprintFontFace);
+            quoteTopLabel.setFont(imprintFontFace.deriveFont(Font.PLAIN, 48f));
+            quoteBottomLabel.setFont(imprintFontFace.deriveFont(Font.PLAIN, 48f));
+        } catch (FontFormatException ex) {
+            Logger.getLogger(RomeoAndJuliet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(RomeoAndJuliet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        JSONParser parser = new JSONParser();
+        try {
+            // This object is the result of parsing the JSON file at the relative filepath as defined above; the JSON file is in the Resources source package.
+            Object quoteObj = parser.parse(new InputStreamReader(getClass().getResourceAsStream("/Resources/Files/db.json")));
+            
+            // This casts the object to a JSONObject for future manipulation
+            JSONObject jsonObject = (JSONObject) quoteObj;
+            
+            // This array holds all the quotes
+            JSONArray quotesArray = (JSONArray) jsonObject.get("Short Stories");
+            Iterator <JSONObject> iterator = quotesArray.iterator();
+            
+            // Using the iterator as declared above, add each JSONObject in the Romeo and Juliet array to the ArrayList
+            while (iterator.hasNext()) {
+                Collections.addAll(quotesList, iterator.next());
+                totalNumberOfQuotes++;
+            }
+            
+            // Init randomizer
+            Random rand = new Random();
+
+            // Generate a random integer between 1 and size of the ArrayList
+            quoteIndex = rand.nextInt(quotesList.size()) + 1;
+            
+            generateQuote(quoteIndex); // This calls a method to generate a quote and display it
+        } catch (Exception e) { // This means something went very wrong when starting the program
+            System.out.println("Uh oh, something bad happened. Possible database corruption.");
+            JOptionPane.showMessageDialog(null, "Something went wrong while starting the app! Please tell Aaron with code 129.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void previousButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previousButtonActionPerformed
+        if (quoteIndex != 1) {
+            --quoteIndex;
+            generateQuote(quoteIndex);
+        }
+    }//GEN-LAST:event_previousButtonActionPerformed
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        if (quoteIndex != totalNumberOfQuotes) {
+            quoteIndex++;
+            generateQuote(quoteIndex);
+        }
+    }//GEN-LAST:event_nextButtonActionPerformed
+
+    private void quoteIndexTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quoteIndexTextFieldMouseClicked
+        getRootPane().setDefaultButton(goButton);
+    }//GEN-LAST:event_quoteIndexTextFieldMouseClicked
+
+    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
+        try {
+            if (Integer.parseInt(quoteIndexTextField.getText()) <= totalNumberOfQuotes && Integer.parseInt(quoteIndexTextField.getText()) >= 1) {
+                quoteIndex = Integer.parseInt(quoteIndexTextField.getText());
+                generateQuote(quoteIndex);
+            } else {
+                JOptionPane.showMessageDialog(null, "Whatever number you entered isn't valid. Try again!", "Uh oh!", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Whatever number you entered isn't valid. Try again!", "Uh oh!", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_goButtonActionPerformed
+
+    private void randomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_randomButtonActionPerformed
+        // Init randomizer
+        Random rand = new Random();
+
+        // Generate a random integer between 0 and size of the ArrayList
+        quoteIndex = rand.nextInt(quotesList.size()) + 1;
+        System.out.println(quoteIndex);
+
+        // Prevent generating the same index as previously used
+        if (previousQuoteIndexArray.size() > totalNumberOfQuotes) {
+            previousQuoteIndexArray.clear();
+        }
+
+        while (previousQuoteIndexArray.size() < totalNumberOfQuotes && previousQuoteIndexArray.indexOf(quoteIndex) != -1) {
+            System.out.println("The quote was regenerated and the previous index was at " + previousQuoteIndexArray.indexOf(quoteIndex));
+            quoteIndex = rand.nextInt(quotesList.size()) + 1;
+        }
+
+        // For logging
+        //        System.out.println(previousQuoteIndexArray.size());
+        //        for (int i = 0; i < previousQuoteIndexArray.size(); i++) {
+            //            System.out.println("The item #" + i + " is " + previousQuoteIndexArray.get(i));
+            //        }
+
+        // Show the new quote
+        generateQuote(quoteIndex);
+    }//GEN-LAST:event_randomButtonActionPerformed
+
+    private void rescueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rescueButtonActionPerformed
+        answerLabel.setText("<html>" + (String)quotesList.get(quoteIndex - 1).get("Literary Device") + "</html>");
+        answerLabel.setVisible(true);
+    }//GEN-LAST:event_rescueButtonActionPerformed
+
+    private void checkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkButtonActionPerformed
+        String answerToCheck;
+        try {
+            answerToCheck = answerTextField.getText(); // Get the text from the text entry field
+            System.out.println(answerToCheck);
+            if (!answerTextField.getText().equals("")) { // User has entered a valid string
+                answerToCheck = answerToCheck.substring(0).toLowerCase(); // Convert to all lowercase
+                answer = answer.substring(0).toLowerCase(); // Convert to all lowercase
+                if (answer.contains(answerToCheck)) { // User was correct, show on button
+                    checkButton.setText("Correct!");
+                    checkButton.setBackground(Color.green);
+                    checkButton.setForeground(Color.white);
+                    nextButton.setEnabled(true);
+                } else { // User was wrong, show on button
+                    checkButton.setText("Incorrect!");
+                    checkButton.setBackground(Color.red);
+                    checkButton.setForeground(Color.white);
+                }
+            } else { // User tried to check an empty string; prompt for input
+                JOptionPane.showMessageDialog(null, "You have no literary device! Please enter one and check again.", "Uh-oh!", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Something went wrong while checking your answer! Please tell Aaron with code 130.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_checkButtonActionPerformed
+
+    private void answerTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerTextFieldMouseClicked
+        getRootPane().setDefaultButton(checkButton);
+    }//GEN-LAST:event_answerTextFieldMouseClicked
+
+        private void generateQuote(int index) {
+        // Add this index to the list of indices already used
+        previousQuoteIndexArray.add(index);
+        
+        // Hide any previous rescue hints
+        answerLabel.setVisible(false);
+        
+        // Reset all buttons
+        checkButton.setBackground(Color.GRAY);
+        checkButton.setText("Check");
+        checkButton.setForeground(Color.BLACK);
+        
+        // Reset text field
+        answerTextField.setText("");
+        
+        // Set comments, clue, and related numbers
+        commentsLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Comment") + "</html>");
+        clueLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Hint") + "</html>");
+        examplesLabel.setText("<html>Quote numbers with the same literary device:<br><br>" + (String)quotesList.get(index - 1).get("Related") + "</html>");
+        
+        // Set the location of the quote
+        storyLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Short Story") + "</html>"); // Set the Act #
+
+        // Set main panel
+        passageLabel.setText("<html>" + (String)quotesList.get(index - 1).get("Quote") + "</html>");
+
+        // Set the answer
+        answer = (String)quotesList.get(index - 1).get("Literary Device");
+
+        // Set the total number of quotes in navigation pane and current quote
+        totalNumberLabel.setText("/" + Integer.toString(totalNumberOfQuotes));
+        quoteIndexTextField.setText(Integer.toString(index - 1 + 1));
+        
+        // Disable appropriate buttons if there are user is at bounds of array
+        if (index == totalNumberOfQuotes) {
+            nextButton.setEnabled(false);
+            previousButton.setEnabled(true);
+        } else if ((index - 1) <= 0) {
+            previousButton.setEnabled(false);
+            nextButton.setEnabled(true);
+        } else {
+            nextButton.setEnabled(true);
+            previousButton.setEnabled(true);
+        }
+        
+        /*********************************************************************************************************************************** LOGS */
+        // Log the total number of quotes
+        System.out.println("The total number of quotes is: " + totalNumberOfQuotes + " and the size of the array is: " + quotesList.size());
+        // Get the element of the ArrayList and print it
+        System.out.println("The thing that was printed was: " + quotesList.get(quoteIndex - 1));
+        // Get the generated quote of the ArrayList and get the "Quote" part
+        System.out.println("The quote is " + quotesList.get(quoteIndex - 1).get("Quote"));
+        /*********************************************************************************************************************************** END OF LOGS */
+    }
+        
     /**
      * @param args the command line arguments
      */
@@ -295,30 +697,44 @@ public class ShortStories extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel answerLabel;
     private javax.swing.JPanel answerTabPanel;
     private javax.swing.JTextField answerTextField;
+    private javax.swing.JButton backButton;
     private javax.swing.JButton checkButton;
     private javax.swing.JLabel clueLabel;
     private javax.swing.JPanel clueTabPanel;
     private javax.swing.JLabel clueTitleLabel;
+    private javax.swing.JLabel commentsLabel;
     private javax.swing.JPanel commentsTabPanel;
-    private javax.swing.JLabel commmentsLabel;
     private javax.swing.JPanel exampleTabPabel;
     private javax.swing.JLabel examplesLabel;
     private javax.swing.JLabel forkLabel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton goButton;
     private javax.swing.JLabel lambLabel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel menuTitleLabel;
     private javax.swing.JLabel mouseLabel;
+    private javax.swing.JPanel navigationPanel;
+    private javax.swing.JButton nextButton;
     private javax.swing.JLabel passageLabel;
     private javax.swing.JLabel plateLabel;
+    private javax.swing.JButton previousButton;
     private javax.swing.JLabel questionLabel;
+    private javax.swing.JLabel quoteBottomLabel;
+    private javax.swing.JTextField quoteIndexTextField;
+    private javax.swing.JLabel quoteTopLabel;
+    private javax.swing.JButton randomButton;
+    private javax.swing.JButton rescueButton;
     private javax.swing.JPanel secondaryPanel;
     private javax.swing.JLabel spoonLabel;
+    private javax.swing.JLabel storyLabel;
+    private javax.swing.JLabel stuckLabel;
     private javax.swing.JTabbedPane tabbedPane;
     private javax.swing.JLabel tableclothLabel;
+    private javax.swing.JLabel totalNumberLabel;
     private javax.swing.JLabel watermelonLabel;
+    private javax.swing.JLabel youAreViewingLabel;
     // End of variables declaration//GEN-END:variables
 
 }

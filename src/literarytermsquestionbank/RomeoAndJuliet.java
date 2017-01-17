@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
+import java.awt.Toolkit;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     public RomeoAndJuliet() {
         initComponents();
         getRootPane().setDefaultButton(checkButton); // Sets the default button
+        this.setLocationRelativeTo(null); // Put window in middle of screen
     }
 
     /** This method is called from within the constructor to
@@ -79,6 +81,7 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
         randomButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Romeo and Juliet");
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 1140, 790));
         setForeground(new java.awt.Color(255, 255, 255));
@@ -410,7 +413,9 @@ public class RomeoAndJuliet extends javax.swing.JFrame {
     ArrayList <Integer> previousQuoteIndexArray = new ArrayList(); // Used to keep track of quotes already used
     ArrayList <JSONObject> quotesList = new ArrayList(); // Used to hold all the quotes
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+        // Set custom  icon
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Resources/Images/book-icon_rj.png")));
+        
         // Set custom fonts
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();

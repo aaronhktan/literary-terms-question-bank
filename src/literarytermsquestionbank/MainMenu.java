@@ -7,6 +7,7 @@ package literarytermsquestionbank;
 
 import java.awt.Cursor;
 import java.awt.Desktop;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,6 +25,7 @@ public class MainMenu extends javax.swing.JFrame {
     /** Creates new form MainMenu */
     public MainMenu() {
         initComponents();
+        this.setLocationRelativeTo(null); // Put window in middle of screen
     }
 
     /** This method is called from within the constructor to
@@ -52,7 +54,13 @@ public class MainMenu extends javax.swing.JFrame {
         setTitle("Literary Terms Practice Bank");
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 1118, 800));
+        setName("mainMenuFrame"); // NOI18N
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setMinimumSize(new java.awt.Dimension(691, 822));
@@ -105,6 +113,9 @@ public class MainMenu extends javax.swing.JFrame {
         listLabel.setBounds(610, 40, 40, 420);
 
         helpLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 helpLabelMouseEntered(evt);
             }
@@ -182,6 +193,7 @@ public class MainMenu extends javax.swing.JFrame {
         new AChristmasCarol().setVisible(true);
     }//GEN-LAST:event_ChristmasCarolLabelMouseClicked
 
+    // Opens the list of Literayr Devices
     private void listLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listLabelMouseClicked
         try {
             // This app gets the file located at the filepath
@@ -197,6 +209,27 @@ public class MainMenu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Seem like you don't have a program to open PDF files.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_listLabelMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Resources/Images/book-icon.png")));
+    }//GEN-LAST:event_formWindowOpened
+
+    // Opens help manual
+    private void helpLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpLabelMouseClicked
+                try {
+            // This app gets the file located at the filepath
+            String inputPDF = "Resources/Files/LiteraryDevicesHelp.pdf";
+            InputStream literaryDevicesAsStream = getClass().getClassLoader().getResourceAsStream(inputPDF);
+            Path tempOutput = Files.createTempFile("TempList", ".pdf");
+            tempOutput.toFile().deleteOnExit();
+            Files.copy(literaryDevicesAsStream, tempOutput, StandardCopyOption.REPLACE_EXISTING);
+            File literaryTermsList = new File(tempOutput.toFile().getPath());
+            // And then opens the PDF file with whatever the user has installed as their PDF reader
+            Desktop.getDesktop().open(literaryTermsList);
+        } catch (IOException e) { // User does not have a program to open PDFs
+            JOptionPane.showMessageDialog(null, "Seem like you don't have a program to open PDF files.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_helpLabelMouseClicked
 
     /**
      * @param args the command line arguments
