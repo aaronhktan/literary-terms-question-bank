@@ -336,7 +336,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(nextButton);
-        nextButton.setBounds(640, 40, 69, 40);
+        nextButton.setBounds(640, 40, 65, 40);
 
         youAreViewingLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -347,7 +347,7 @@ public class ShortStories extends javax.swing.JFrame {
         totalNumberLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         totalNumberLabel.setText("of 106");
         navigationPanel.add(totalNumberLabel);
-        totalNumberLabel.setBounds(120, 50, 100, 47);
+        totalNumberLabel.setBounds(120, 50, 100, 46);
 
         quoteIndexTextField.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -366,7 +366,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(goButton);
-        goButton.setBounds(210, 40, 63, 40);
+        goButton.setBounds(210, 40, 57, 40);
 
         randomButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         randomButton.setText("Random!");

@@ -31,14 +31,15 @@ public class AChristmasCarol extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         mainPanel = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
         salutationLabel = new javax.swing.JLabel();
         passageLabel = new javax.swing.JLabel();
         signatureLabel = new javax.swing.JLabel();
+        envelopeLabel = new javax.swing.JLabel();
         tree400Label = new javax.swing.JLabel();
         tree300Label = new javax.swing.JLabel();
         tree300Label1 = new javax.swing.JLabel();
         tree200Label = new javax.swing.JLabel();
-        envelopeLabel = new javax.swing.JLabel();
         tree150Label = new javax.swing.JLabel();
         skyPanel = new javax.swing.JPanel();
         tabbedPane = new javax.swing.JTabbedPane();
@@ -56,8 +57,8 @@ public class AChristmasCarol extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("A Christmas Carol");
-        setBounds(new java.awt.Rectangle(0, 0, 1140, 760));
-        setMinimumSize(new java.awt.Dimension(1140, 790));
+        setBounds(new java.awt.Rectangle(0, 0, 1140, 600));
+        setMinimumSize(new java.awt.Dimension(1140, 700));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -67,48 +68,60 @@ public class AChristmasCarol extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         mainPanel.setBackground(new java.awt.Color(199, 255, 255));
+        mainPanel.setMinimumSize(new java.awt.Dimension(1140, 600));
         mainPanel.setLayout(null);
+
+        backButton.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
+        backButton.setText("< Back");
+        backButton.setOpaque(false);
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        mainPanel.add(backButton);
+        backButton.setBounds(10, 620, 90, 50);
 
         salutationLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
         salutationLabel.setText("Dear Santa,");
         mainPanel.add(salutationLabel);
-        salutationLabel.setBounds(380, 250, 120, 30);
+        salutationLabel.setBounds(370, 160, 120, 30);
 
         passageLabel.setFont(new java.awt.Font("Freestyle Script", 0, 24)); // NOI18N
         passageLabel.setText("<html>Bacon ipsum dolor amet meatball bresaola shank drumstick, corned beef doner pork loin ball tip pork chop capicola filet mignon. Ground round swine t-bone andouille. Spare ribs bacon ribeye turducken corned beef shoulder rump. Shoulder shankle short loin kielbasa strip steak ball tip. Fatback meatball bacon biltong pastrami landjaeger.  Fatback jerky chicken, meatball chuck corned beef sirloin pancetta turkey pork cow picanha. Strip steak venison pork pastrami cupim chicken sausage capicola burgdoggen tri-tip. Cupim pork belly porchetta boudin capicola. Pork chop ham pork loin tail capicola, shankle short ribs bacon shoulder frankfurter pig meatball meatloaf.</html>");
         mainPanel.add(passageLabel);
-        passageLabel.setBounds(400, 300, 400, 320);
+        passageLabel.setBounds(390, 210, 400, 320);
 
         signatureLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
         signatureLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         signatureLabel.setText("<html>Love,<br>Scrooge</html>");
         signatureLabel.setToolTipText("");
         mainPanel.add(signatureLabel);
-        signatureLabel.setBounds(680, 620, 120, 90);
-
-        tree400Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree.png"))); // NOI18N
-        mainPanel.add(tree400Label);
-        tree400Label.setBounds(40, 290, 265, 451);
-
-        tree300Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
-        mainPanel.add(tree300Label);
-        tree300Label.setBounds(0, 240, 180, 330);
-
-        tree300Label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
-        mainPanel.add(tree300Label1);
-        tree300Label1.setBounds(970, 320, 180, 330);
-
-        tree200Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_200.png"))); // NOI18N
-        mainPanel.add(tree200Label);
-        tree200Label.setBounds(910, 250, 117, 199);
+        signatureLabel.setBounds(670, 530, 120, 90);
 
         envelopeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/envelope.png"))); // NOI18N
         mainPanel.add(envelopeLabel);
-        envelopeLabel.setBounds(300, 220, 600, 771);
+        envelopeLabel.setBounds(290, 140, 600, 771);
+
+        tree400Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree.png"))); // NOI18N
+        mainPanel.add(tree400Label);
+        tree400Label.setBounds(60, 160, 265, 451);
+
+        tree300Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
+        mainPanel.add(tree300Label);
+        tree300Label.setBounds(0, 150, 180, 330);
+
+        tree300Label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_300.png"))); // NOI18N
+        mainPanel.add(tree300Label1);
+        tree300Label1.setBounds(940, 260, 180, 330);
+
+        tree200Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_200.png"))); // NOI18N
+        mainPanel.add(tree200Label);
+        tree200Label.setBounds(860, 220, 117, 199);
 
         tree150Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/ChristmasTree_150.png"))); // NOI18N
         mainPanel.add(tree150Label);
-        tree150Label.setBounds(180, 260, 88, 150);
+        tree150Label.setBounds(230, 240, 88, 150);
 
         skyPanel.setBackground(new java.awt.Color(102, 204, 255));
 
@@ -267,6 +280,11 @@ public class AChristmasCarol extends javax.swing.JFrame {
         this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Resources/Images/book-icon_acc.png")));
     }//GEN-LAST:event_formWindowOpened
 
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        this.setVisible(false);
+        new MainMenu().setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -305,6 +323,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel answerTabPanel;
     private javax.swing.JTextField answerTextField;
+    private javax.swing.JButton backButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton checkButton;
     private javax.swing.JLabel clueLabel;

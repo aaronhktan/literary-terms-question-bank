@@ -1492,5 +1492,214 @@
       "Number": "35",
       "Related": "28"
     }
+  ],
+  "A Christmas Carol": [
+    {
+      "Literary Device": "Simile",
+      "Quote": "Old Marley was as dead as a doornail.",
+      "Stave": "1",
+      "Comment": "This comparison uses comparison words, so it's a simile.",
+      "Hint": "A comparison is done between Marley's dead and a doornail, with the structure \"as... as...\".",
+      "Number": "0",
+      "Related": "4, 19"
+    },
+    {
+      "Literary Device": "Alliteration",
+      "Quote": "No warmth could warm, no wintry weather chill him.",
+      "Stave": "1",
+      "Comment": "The repetition of the letter w makes this alliteration",
+      "Hint": "Look at the first letters (\"warmth\", \"warm\", \"wintry\", \"weather\".",
+      "Number": "1",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "Gnawed and mumbled by the hungry cold...",
+      "Stave": "1",
+      "Comment": "Allowing the cold to \"gnaw\" and \"mumble\" gives it human abilities. This is personification.",
+      "Hint": "The cold \"gnaws\" and \"mumbles\", which are actions that humans do.",
+      "Number": "2",
+      "Related": "7, 16, 23"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "It had a dismal light about it... like a bad lobster in a dark cellar.",
+      "Stave": "1",
+      "Comment": "No comment available.",
+      "Hint": "The word \"like\" is used in this comparison.",
+      "Number": "3",
+      "Related": "1, 19"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "There were Cains and Abels...",
+      "Stave": "1",
+      "Comment": "When the author refers to characters or people who are not from that work, it is an allusion.",
+      "Hint": "Cain and Abel is from the Bible.",
+      "Number": "4",
+      "Related": "9"
+    },
+    {
+      "Literary Device": "Pun",
+      "Quote": "There’s more of gravy than of grave about you, whatever you are!",
+      "Stave": "1",
+      "Comment": "This wordplay between \"gravy\" and \"grave\" is a pun.",
+      "Hint": "\"Gravy\" and \"grave\" are used for comedic effect here, based on how the words are used.",
+      "Number": "5",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "The crisp air laughed to hear it!",
+      "Stave": "2",
+      "Comment": "\"Laughing\" is a human thing, and ascribing human abilities to non-human things (in this case, the air) is personification.",
+      "Hint": "Can air laugh?",
+      "Number": "6",
+      "Related": "3, 16, 23"
+    },
+    {
+      "Literary Device": "Imagery",
+      "Quote": "There was an earthy savour in the air, a chilly bareness in the place...",
+      "Stave": "2",
+      "Comment": "An \"earthy savour\" and \"chilly bareness\" are examples of imagery appealing to smell and touch. Imagery does not necessarily have to do with an \"image\"; it can be for any of the five senses.",
+      "Hint": "This passage contains description that appeals to the senses.",
+      "Number": "7",
+      "Related": "12"
+    },
+    {
+      "Literary Device": "Allusion",
+      "Quote": "Poor Robin Crusoe...",
+      "Stave": "2",
+      "Comment": "This reference makes this passage an example of allusion.",
+      "Hint": "\"Robinson Crusoe\" recounts the story of a guy who gets shipwrecked and separated from the rest of society. This is a reference to another work of fiction.",
+      "Number": "8",
+      "Related": "5"
+    },
+    {
+      "Literary Device": "Pathos",
+      "Quote": "Nothing. There was a boy singing a Christmas Carol at my door last night. I should like to have given him something: that’s all.",
+      "Stave": "2",
+      "Comment": "Feeling sorry for a character is the author creating pathos.",
+      "Hint": "Scrooge begins to have a change of heart, regretting that he was not more generous. Considering his angry self before, this makes the readers feel a bit sorry for him.",
+      "Number": "9",
+      "Related": "14, 18"
+    },
+    {
+      "Literary Device": "Contrast",
+      "Quote": "He has the power to render us happy or unhappy; to make our service light or burdensome; a pleasure or a toil.",
+      "Stave": "2",
+      "Comment": "Putting opposites next to each other creates contrast (it emphasizes the difference between the opposites).",
+      "Hint": "\"Happy\" and \"unhappy\" are opposites. \"Light\" and \"burdensome\" are opposites. \"Pleasure\" and \"toil\" are also opposites.",
+      "Number": "10",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Imagery",
+      "Quote": "Heaped up on the floor, to form a kind of throne, were turkeys, geese, game, poultry, brawn, great joints of meat, sucking-pigs, long wreaths of sausages, mince-pies, plum-puddings, barrels of oysters, red-hot chestnuts, cherry-cheeked apples, juicy oranges, luscious pears, immense twelfth-cakes, and seething bowls of punch, that made the chamber dim with their delicious steam.",
+      "Stave": "3",
+      "Comment": "How this scene is described creates imagery - with sight (\"heaped upon the floor\", \"dim with delicious steam\"), taste (\"luscious pears\" , etc.), and smell (\"delicious steam\").",
+      "Hint": "Look at these delicious adjectives! Does it make you feel anything?",
+      "Number": "11",
+      "Related": "8"
+    },
+    {
+      "Literary Device": "Epithet",
+      "Quote": "Scrooge the Baleful...",
+      "Stave": "3",
+      "Comment": "Using this adjective highlights Scrooge's miserliness, which make this an example of epithet.",
+      "Hint": "The use of \"baleful\" highlights a particular personality trait of Scrooge's.",
+      "Number": "12",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Pathos",
+      "Quote": "If these shadows remain unaltered by the Future, the child will die.",
+      "Stave": "3",
+      "Comment": "Feeling sorry for a character (in this case, Tiny Tim), makes this an example of pathos.",
+      "Hint": "\"The child\" refers to Tiny Tim. He is the happiest child, even though he is very sick. This makes us empathize for him.",
+      "Number": "13",
+      "Related": "10, 18"
+    },
+    {
+      "Literary Device": "Foil",
+      "Quote": "I am sorry for him; I couldn’t be angry with him if I tried. (Spoken by Scrooge's nephew)",
+      "Stave": "3",
+      "Comment": "Two characters that are opposites make a character foil. They emphasize each other's worst qualities (Scrooge's selfishness) and best parts (forgiving nature of Scrooge's nephew).",
+      "Hint": "Scrooge is very mean Scrooge's nephew is not at all. These characters, that are so unlike each other, emphasize each other's character traits.",
+      "Number": "14",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Metaphor, Personification",
+      "Quote": "This boy is Ignorance. This girl is Want.",
+      "Stave": "3",
+      "Comment": "In this passage, Dickens compares these two desires (Ignorance and Want) to filthy children as a metaphor for what they really are.",
+      "Hint": "Dickens gives us a representation of Ignorance and Want, was two disgusting children.",
+      "Number": "15",
+      "Related": "3, 7, 23"
+    },
+    {
+      "Literary Device": "Apostrophe",
+      "Quote": "Oh cold, cold, rigid, dreadful Death, set up thine altar here, and dress it with such terrors as thou hast at thy command: for this is thy dominion!",
+      "Stave": "4",
+      "Comment": "Speaking to ideas or concepts that are not human makes this an example of apostrophe.",
+      "Hint": "Here, the author speaks to Death. However, death is not a person.",
+      "Number": "16",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Pathos",
+      "Quote": "\"If there is any person in the town, who feels emotion caused by this man’s death,” said Scrooge quite agonised, “show that person to me, Spirit, I beseech you!\"",
+      "Stave": "5",
+      "Comment": "Feeling pity for somebody is a sign of pathos.",
+      "Hint": "Scrooge expects the Ghost of Christmas Yet to Come to show him somebody who feels sad about his death. However, what we actually see is somebody who is thankful that he has died. We are supposed to feel sorry for this guy, who is having a change of heart already.",
+      "Number": "17",
+      "Related": "10, 14"
+    },
+    {
+      "Literary Device": "Simile",
+      "Quote": "I am as light as a feather, I am as happy as an angel, I am as merry as a schoolboy.",
+      "Stave": "5",
+      "Comment": "This structure of comparison words is makes this an example of simile.",
+      "Hint": "Scrooge compares himself to all of these, with the structure \"as... as...\".",
+      "Number": "18",
+      "Related": "1, 4"
+    },
+    {
+      "Literary Device": "Onomatopoeia",
+      "Quote": "Clash, clang, hammer; ding, dong, bell.",
+      "Stave": "5",
+      "Comment": "Sound words (such as \"clang\", \"clash\", \"ding\", \"dong\") are examples of onomatopoiea.",
+      "Hint": "These words are transliterations of the sounds that bells make.",
+      "Number": "19",
+      "Related": "No other examples found."
+    },
+    {
+      "Literary Device": "Elision",
+      "Quote": "Tell 'em to bring it here.",
+      "Stave": "5",
+      "Comment": "Because this abbreviation of the word is at the beginning and it makes it easier to say, it makes this an example of elision.",
+      "Hint": "Scrooge is so excited that he takes out the \"th\" in \"them\", so he can speak faster.",
+      "Number": "20",
+      "Related": "22"
+    },
+    {
+      "Literary Device": "Elision",
+      "Quote": "Thank’ee!",
+      "Stave": "5",
+      "Comment": "Removing consonants and vowels between words is an example of elision.",
+      "Hint": "Scrooge is very excited, and melds together the two words (\"thank\" and \"you\") to make \"thank'ee\".",
+      "Number": "21",
+      "Related": "21"
+    },
+    {
+      "Literary Device": "Personification",
+      "Quote": "His own heart laughed...",
+      "Stave": "5",
+      "Comment": "No comment available.",
+      "Hint": "Hearts cannot laugh, because that would feel really weird in your chest. This gives human abilities to a heart.",
+      "Number": "22",
+      "Related": "3, 7, 16"
+    }
   ]
 }
