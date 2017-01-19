@@ -336,7 +336,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(nextButton);
-        nextButton.setBounds(640, 40, 65, 40);
+        nextButton.setBounds(640, 40, 69, 40);
 
         youAreViewingLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -347,7 +347,7 @@ public class ShortStories extends javax.swing.JFrame {
         totalNumberLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
         totalNumberLabel.setText("of 106");
         navigationPanel.add(totalNumberLabel);
-        totalNumberLabel.setBounds(120, 50, 100, 46);
+        totalNumberLabel.setBounds(120, 40, 100, 47);
 
         quoteIndexTextField.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -366,7 +366,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(goButton);
-        goButton.setBounds(210, 40, 57, 40);
+        goButton.setBounds(210, 40, 80, 40);
 
         randomButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
         randomButton.setText("Random!");
@@ -407,7 +407,7 @@ public class ShortStories extends javax.swing.JFrame {
         passageLabel.setText("<html>Bacon ipsum dolor amet meatloaf ground round short loin flank, burgdoggen filet mignon biltong. Shankle rump spare ribs tongue turkey.</html>");
         passageLabel.setOpaque(true);
         mainPanel.add(passageLabel);
-        passageLabel.setBounds(640, 120, 320, 320);
+        passageLabel.setBounds(640, 150, 320, 270);
 
         lambLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/Lamb.png"))); // NOI18N
         mainPanel.add(lambLabel);
