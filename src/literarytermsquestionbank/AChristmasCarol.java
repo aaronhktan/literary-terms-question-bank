@@ -112,7 +112,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
         salutationLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
         salutationLabel.setText("Dear Santa,");
         mainPanel.add(salutationLabel);
-        salutationLabel.setBounds(370, 160, 120, 30);
+        salutationLabel.setBounds(370, 160, 310, 30);
 
         passageLabel.setFont(new java.awt.Font("Freestyle Script", 0, 24)); // NOI18N
         passageLabel.setText("<html>Bacon ipsum dolor amet meatball bresaola shank drumstick, corned beef doner pork loin ball tip pork chop capicola filet mignon. Ground round swine t-bone andouille. Spare ribs bacon ribeye turducken corned beef shoulder rump. Shoulder shankle short loin kielbasa strip steak ball tip. Fatback meatball bacon biltong pastrami landjaeger.  Fatback jerky chicken, meatball chuck corned beef sirloin pancetta turkey pork cow picanha. Strip steak venison pork pastrami cupim chicken sausage capicola burgdoggen tri-tip. Cupim pork belly porchetta boudin capicola. Pork chop ham pork loin tail capicola, shankle short ribs bacon shoulder frankfurter pig meatball meatloaf.</html>");
@@ -124,7 +124,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
         signatureLabel.setText("<html>Love,<br>Scrooge</html>");
         signatureLabel.setToolTipText("");
         mainPanel.add(signatureLabel);
-        signatureLabel.setBounds(670, 530, 120, 90);
+        signatureLabel.setBounds(520, 530, 250, 90);
 
         envelopeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Images/envelope.png"))); // NOI18N
         mainPanel.add(envelopeLabel);
@@ -219,10 +219,10 @@ public class AChristmasCarol extends javax.swing.JFrame {
         realAnswerTabPanelLayout.setHorizontalGroup(
             realAnswerTabPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, realAnswerTabPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(49, 49, 49)
                 .addComponent(realAnswerTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(realAnswerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(realAnswerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
         realAnswerTabPanelLayout.setVerticalGroup(
@@ -333,25 +333,31 @@ public class AChristmasCarol extends javax.swing.JFrame {
         navigationPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         navigationPanel.setLayout(null);
 
-        previousButton.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
-        previousButton.setText("Previous");
+        previousButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        previousButton.setText("▲");
+        previousButton.setMaximumSize(new java.awt.Dimension(50, 25));
+        previousButton.setMinimumSize(new java.awt.Dimension(50, 25));
+        previousButton.setPreferredSize(new java.awt.Dimension(50, 25));
         previousButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 previousButtonActionPerformed(evt);
             }
         });
         navigationPanel.add(previousButton);
-        previousButton.setBounds(450, 20, 81, 25);
+        previousButton.setBounds(480, 22, 50, 25);
 
-        nextButton.setFont(new java.awt.Font("Gill Sans MT", 0, 14)); // NOI18N
-        nextButton.setText("Next");
+        nextButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        nextButton.setText("▼");
+        nextButton.setMaximumSize(new java.awt.Dimension(50, 25));
+        nextButton.setMinimumSize(new java.awt.Dimension(50, 25));
+        nextButton.setPreferredSize(new java.awt.Dimension(50, 25));
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextButtonActionPerformed(evt);
             }
         });
         navigationPanel.add(nextButton);
-        nextButton.setBounds(470, 60, 63, 25);
+        nextButton.setBounds(480, 60, 50, 25);
 
         youAreViewingLabel.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -381,7 +387,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
             }
         });
         navigationPanel.add(goButton);
-        goButton.setBounds(270, 20, 71, 30);
+        goButton.setBounds(270, 20, 120, 30);
 
         randomButton.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
         randomButton.setText("Random!");
@@ -444,10 +450,8 @@ public class AChristmasCarol extends javax.swing.JFrame {
             youAreViewingLabel.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 18f));
             quoteIndexTextField.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 24f));
             totalNumberLabel.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 36f));
-            goButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 24f));
-            randomButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 24f));
-            previousButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 14f));
-            nextButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 14f));
+            goButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 20f));
+            randomButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 20f));
             backButton.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 14f));
             clueLabel.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 14f));
             passageLabel.setFont(gillSansFontFace.deriveFont(Font.PLAIN, 18f));
@@ -459,8 +463,8 @@ public class AChristmasCarol extends javax.swing.JFrame {
             // Load the FreeStyle Script font from resources
            Font freeStyleFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/FREESCPT.TTF"));
            ge.registerFont(freeStyleFontFace);
-           salutationLabel.setFont(freeStyleFontFace.deriveFont(Font.PLAIN, 36f));
-           signatureLabel.setFont(freeStyleFontFace.deriveFont(Font.PLAIN, 36f));
+           salutationLabel.setFont(freeStyleFontFace.deriveFont(Font.PLAIN, 30f));
+           signatureLabel.setFont(freeStyleFontFace.deriveFont(Font.PLAIN, 30f));
             
         } catch (FontFormatException ex) {
             Logger.getLogger(RomeoAndJuliet.class.getName()).log(Level.SEVERE, null, ex);
