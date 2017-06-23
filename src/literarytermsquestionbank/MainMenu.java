@@ -11,9 +11,14 @@ import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -127,8 +132,14 @@ public class MainMenu extends javax.swing.JFrame {
         creditsLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         creditsLabel.setText("<html><em>Made by Aaron Tan</em></html>");
         creditsLabel.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        creditsLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        creditsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                creditsLabelMouseClicked(evt);
+            }
+        });
         mainPanel.add(creditsLabel);
-        creditsLabel.setBounds(600, 480, 140, 30);
+        creditsLabel.setBounds(600, 490, 140, 20);
 
         titleLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -230,6 +241,19 @@ public class MainMenu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Seem like you don't have a program to open PDF files.", "Uh-oh!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_helpLabelMouseClicked
+
+    // Open web browser to GitHub page when user clicks the label
+    private void creditsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsLabelMouseClicked
+        if (Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().browse(new URI(("http://github.com/cheeseisdisgusting/")));
+            } catch (IOException ex) {
+                Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_creditsLabelMouseClicked
 
     /**
      * @param args the command line arguments

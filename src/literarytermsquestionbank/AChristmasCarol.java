@@ -110,7 +110,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
         backButton.setBounds(10, 620, 90, 50);
 
         salutationLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
-        salutationLabel.setText("Dear Santa,");
+        salutationLabel.setText("Dear Uncle Scrooge,");
         mainPanel.add(salutationLabel);
         salutationLabel.setBounds(370, 160, 310, 30);
 
@@ -121,7 +121,7 @@ public class AChristmasCarol extends javax.swing.JFrame {
 
         signatureLabel.setFont(new java.awt.Font("Freestyle Script", 0, 36)); // NOI18N
         signatureLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        signatureLabel.setText("<html>Love,<br>Scrooge</html>");
+        signatureLabel.setText("<html>Your dear newphew,<br>Fred</html>");
         signatureLabel.setToolTipText("");
         mainPanel.add(signatureLabel);
         signatureLabel.setBounds(520, 530, 250, 90);

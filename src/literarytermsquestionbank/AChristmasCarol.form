@@ -77,7 +77,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Freestyle Script" size="36" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dear Santa,"/>
+            <Property name="text" type="java.lang.String" value="Dear Uncle Scrooge,"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -104,7 +104,7 @@
               <Font name="Freestyle Script" size="36" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="11"/>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;Love,&lt;br&gt;Scrooge&lt;/html&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;Your dear newphew,&lt;br&gt;Fred&lt;/html&gt;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>

@@ -464,28 +464,29 @@ public class ShortStories extends javax.swing.JFrame {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             
             // Load Great Vibes from resources
-            Font greatVibesFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/GVIBES.TTF"));
-            ge.registerFont(greatVibesFontFace);
-            questionLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
-            checkButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
-            stuckLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
-            rescueButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            answerLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            youAreViewingLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            quoteIndexTextField.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            totalNumberLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 36f));
-            goButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            randomButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            previousButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            nextButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            backButton.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 24f));
-            clueLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
-            passageLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
-            examplesLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
-            commentsLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 30f));
-            storyLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 20f));
-            tabbedPane.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
-            menuTitleLabel.setFont(greatVibesFontFace.deriveFont(Font.PLAIN, 18f));
+            Font bradleyFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/BRADHITC.TTF"));
+            ge.registerFont(bradleyFontFace);
+            questionLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 30f));
+            checkButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 36f));
+            stuckLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 24f));
+            rescueButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            answerLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            youAreViewingLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            quoteIndexTextField.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            totalNumberLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 36f));
+            goButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            randomButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            previousButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            nextButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            backButton.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 24f));
+            clueTitleLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 24f));
+            clueLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 30f));
+            passageLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 30f));
+            examplesLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 30f));
+            commentsLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 30f));
+            storyLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 20f));
+            tabbedPane.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
+            menuTitleLabel.setFont(bradleyFontFace.deriveFont(Font.PLAIN, 18f));
             
             // Load and set Imprint font face
             Font imprintFontFace = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/Resources/Fonts/IMPRISHA.TTF"));

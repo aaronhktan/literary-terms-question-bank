@@ -84,6 +84,7 @@
       "Scene": "1",
       "Line Number": "16-17",
       "Comment": "In this context, it is a biblical reference to 1 Peter 3:7, Husbands, in the same way be considerate as you live with your wives, and treat them with respect as the weaker partner.... Don't sweat it if you don't know this though. Allusions will frequently refer to more famous historical/literary figures.",
+      "Hint": "This is an obscure reference to a well-known text, the Bible.",
       "Number": "7",
       "Related": "11, 16, 38, 44, 52, 56, 74, 91"
     },
@@ -485,7 +486,7 @@
     },
     {
       "Literary Device": "Juxtaposition",
-      "Quote": "And not impute this yielding to light love,<br><br>Which the dark night hath so discoverèd.",
+      "Quote": "And not impute this yielding to light love,<br><br>Which the dark night hath so discovered.",
       "Act": "2",
       "Scene": "2",
       "Line Number": "110-11",
@@ -948,7 +949,7 @@
     },
     {
       "Literary Device": "Irony",
-      "Quote": "Till I behold [Romeo]—dead—<br><br>is my heart.",
+      "Quote": "Till I behold [Romeo]-dead-<br><br>is my heart.",
       "Act": "3",
       "Scene": "5",
       "Line Number": "99-100",
@@ -1047,12 +1048,12 @@
     },
     {
       "Literary Device": "Assonance",
-      "Quote": "...my child is dead<br><br>...my joyes are burièd.",
+      "Quote": "...my child is dead<br><br>...my joyes are buried.",
       "Act": "4",
       "Scene": "5",
       "Line Number": "70",
-      "Comment": "The vowels in \"dead\" and \"burièd\" are similar (they both make the \"ed\" sound), but they are not perfect rhymes. This is what assonance is.",
-      "Hint": "\"Dead\" and \"burièd\" are almost a rhyme, but not quite.",
+      "Comment": "The vowels in \"dead\" and \"buried\" are similar (they both make the \"ed\" sound), but they are not perfect rhymes. This is what assonance is.",
+      "Hint": "\"Dead\" and \"buried\" are almost a rhyme, but not quite.",
       "Number": "95",
       "Related": "2"
     },
@@ -1278,7 +1279,7 @@
     },
     {
       "Literary Device": "Simile",
-      "Quote": "It rolls into the hall like a huge wave, breaking over my head, fowing into my mouth and nose until it becomes a taste.",
+      "Quote": "It rolls into the hall like a huge wave, breaking over my head, flowing into my mouth and nose until it becomes a taste.",
       "Short Story": "Gore",
       "Comment": "Comparison with the word \"like\" is a simile.",
       "Hint": "Amy compares the smell of the strangers to water, using the structure \"like...\".",
@@ -1541,7 +1542,7 @@
     },
     {
       "Literary Device": "Pun",
-      "Quote": "There’s more of gravy than of grave about you, whatever you are!",
+      "Quote": "There's more of gravy than of grave about you, whatever you are!",
       "Stave": "1",
       "Comment": "This wordplay between \"gravy\" and \"grave\" is a pun.",
       "Hint": "\"Gravy\" and \"grave\" are used for comedic effect here, based on how the words are used.",
@@ -1577,7 +1578,7 @@
     },
     {
       "Literary Device": "Pathos",
-      "Quote": "Nothing. There was a boy singing a Christmas Carol at my door last night. I should like to have given him something: that’s all.",
+      "Quote": "Nothing. There was a boy singing a Christmas Carol at my door last night. I should like to have given him something: that's all.",
       "Stave": "2",
       "Comment": "Feeling sorry for a character is the author creating pathos.",
       "Hint": "Scrooge begins to have a change of heart, regretting that he was not more generous. Considering his angry self before, this makes the readers feel a bit sorry for him.",
@@ -1622,7 +1623,7 @@
     },
     {
       "Literary Device": "Foil",
-      "Quote": "I am sorry for him; I couldn’t be angry with him if I tried. (Spoken by Scrooge's nephew)",
+      "Quote": "I am sorry for him; I couldn't be angry with him if I tried. (Spoken by Scrooge's nephew)",
       "Stave": "3",
       "Comment": "Two characters that are opposites make a character foil. They emphasize each other's worst qualities (Scrooge's selfishness) and best parts (forgiving nature of Scrooge's nephew).",
       "Hint": "Scrooge is very mean Scrooge's nephew is not at all. These characters, that are so unlike each other, emphasize each other's character traits.",
@@ -1649,7 +1650,7 @@
     },
     {
       "Literary Device": "Pathos",
-      "Quote": "\"If there is any person in the town, who feels emotion caused by this man’s death,” said Scrooge quite agonised, “show that person to me, Spirit, I beseech you!\"",
+      "Quote": "\"If there is any person in the town, who feels emotion caused by this man's death,\" said Scrooge quite agonised, \"show that person to me, Spirit, I beseech you!\"",
       "Stave": "5",
       "Comment": "Feeling pity for somebody is a sign of pathos.",
       "Hint": "Scrooge expects the Ghost of Christmas Yet to Come to show him somebody who feels sad about his death. However, what we actually see is somebody who is thankful that he has died. We are supposed to feel sorry for this guy, who is having a change of heart already.",
@@ -1685,7 +1686,7 @@
     },
     {
       "Literary Device": "Elision",
-      "Quote": "Thank’ee!",
+      "Quote": "Thank'ee!",
       "Stave": "5",
       "Comment": "Removing consonants and vowels between words is an example of elision.",
       "Hint": "Scrooge is very excited, and melds together the two words (\"thank\" and \"you\") to make \"thank'ee\".",
