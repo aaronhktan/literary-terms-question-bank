@@ -102,11 +102,11 @@ public class ShortStories extends javax.swing.JFrame {
         tabbedPane.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         tabbedPane.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
 
-        menuTitleLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        menuTitleLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 24)); // NOI18N
         menuTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         menuTitleLabel.setText("~Menu~");
 
-        questionLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
+        questionLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 24)); // NOI18N
         questionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         questionLabel.setText("What literary device is this?");
         questionLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -118,7 +118,7 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
 
-        checkButton.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
+        checkButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 24)); // NOI18N
         checkButton.setText("Check answer");
         checkButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkButton.addActionListener(new java.awt.event.ActionListener() {
@@ -127,11 +127,11 @@ public class ShortStories extends javax.swing.JFrame {
             }
         });
 
-        stuckLabel.setFont(new java.awt.Font("Great Vibes", 0, 24)); // NOI18N
+        stuckLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         stuckLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stuckLabel.setText("Completely stuck?");
 
-        rescueButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        rescueButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 24)); // NOI18N
         rescueButton.setText("Rescue Me");
         rescueButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +195,7 @@ public class ShortStories extends javax.swing.JFrame {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, answerTabPanelLayout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(menuTitleLabel)
-                    .addContainerGap(354, Short.MAX_VALUE)))
+                    .addContainerGap(343, Short.MAX_VALUE)))
         );
 
         tabbedPane.addTab("Answer", answerTabPanel);
@@ -318,7 +318,7 @@ public class ShortStories extends javax.swing.JFrame {
         navigationPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         navigationPanel.setLayout(null);
 
-        previousButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        previousButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         previousButton.setText("Previous");
         previousButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,7 +328,7 @@ public class ShortStories extends javax.swing.JFrame {
         navigationPanel.add(previousButton);
         previousButton.setBounds(490, 40, 110, 40);
 
-        nextButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        nextButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         nextButton.setText("Next");
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,18 +338,18 @@ public class ShortStories extends javax.swing.JFrame {
         navigationPanel.add(nextButton);
         nextButton.setBounds(605, 40, 100, 40);
 
-        youAreViewingLabel.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        youAreViewingLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         youAreViewingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         youAreViewingLabel.setText("You are viewing");
         navigationPanel.add(youAreViewingLabel);
         youAreViewingLabel.setBounds(40, 20, 191, 24);
 
-        totalNumberLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
+        totalNumberLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         totalNumberLabel.setText("of 106");
         navigationPanel.add(totalNumberLabel);
-        totalNumberLabel.setBounds(120, 40, 100, 46);
+        totalNumberLabel.setBounds(120, 40, 100, 24);
 
-        quoteIndexTextField.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        quoteIndexTextField.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         quoteIndexTextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 quoteIndexTextFieldMouseClicked(evt);
@@ -358,7 +358,7 @@ public class ShortStories extends javax.swing.JFrame {
         navigationPanel.add(quoteIndexTextField);
         quoteIndexTextField.setBounds(40, 50, 70, 30);
 
-        goButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        goButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         goButton.setText("Go!");
         goButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -368,7 +368,7 @@ public class ShortStories extends javax.swing.JFrame {
         navigationPanel.add(goButton);
         goButton.setBounds(210, 40, 80, 40);
 
-        randomButton.setFont(new java.awt.Font("Great Vibes", 0, 18)); // NOI18N
+        randomButton.setFont(new java.awt.Font("Bradley Hand ITC", 0, 18)); // NOI18N
         randomButton.setText("Random!");
         randomButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -402,7 +402,7 @@ public class ShortStories extends javax.swing.JFrame {
         storyLabel.setBounds(650, 70, 290, 24);
 
         passageLabel.setBackground(new java.awt.Color(255, 255, 255));
-        passageLabel.setFont(new java.awt.Font("Great Vibes", 0, 36)); // NOI18N
+        passageLabel.setFont(new java.awt.Font("Bradley Hand ITC", 0, 36)); // NOI18N
         passageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         passageLabel.setText("<html>Bacon ipsum dolor amet meatloaf ground round short loin flank, burgdoggen filet mignon biltong. Shankle rump spare ribs tongue turkey.</html>");
         passageLabel.setOpaque(true);
