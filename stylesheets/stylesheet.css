@@ -43,7 +43,7 @@ body {
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 30em) {
 	#hero-icon {
 		max-width: 25%;
 	}
@@ -52,7 +52,16 @@ body {
 	}
 }
 
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 30em) and (max-width: 70em) {
+	#hero-icon {
+		max-width: 10%;
+	}
+	#hero-icon img {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 70em) {
 	#hero-icon {
 		max-width: 5%;
 	}
@@ -133,9 +142,6 @@ body {
 @media screen and (max-width: 42em) {
 	.btn {
 		display: block;
-	}
-	#downloadBtn {
-		display: none;
 	}
 }
 
@@ -235,13 +241,23 @@ body {
 	}
 }
 
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 42em) and (max-width: 70em) {
 	.description {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		width: 25%;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 70em) {
+	.description {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 30%;
 	}
 }
 

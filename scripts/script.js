@@ -2,6 +2,24 @@
 var appName = "Literary Terms Question Bank";
 var os = "";
 
+var isMobile = {
+	Windows: function() {
+		return /IEMobile/i.test(navigator.userAgent);
+	},
+	Android: function() {
+		return /Android/i.test(navigator.userAgent);
+	},
+	Blackberry: function() {
+		return /Blackberry/i.test(navigator.userAgent);
+	},
+	iOS: function() {
+		return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	},
+	any: function() {
+		return (isMobile.Windows() || isMobile.Android() || isMobile.Blackberry() || isMobile.iOS() );
+	}
+}
+
 function isMac() { // Returns platform
 	return navigator.platform.indexOf("Mac") != -1;
 }
@@ -66,6 +84,10 @@ function showButtons() { // Modify the links depending on the operating system
 	var downloadButton = document.getElementById("downloadBtn");
 	downloadButton.href = getURL();
 	downloadButton.innerHTML = "Download" + os;
+
+	if (isMobile.any()) {
+		downloadButton.style.display = "none";
+	}
 }
 
 showButtons();
