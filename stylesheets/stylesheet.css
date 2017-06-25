@@ -4,11 +4,12 @@ html {
 
 body {
 	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	font-weight: 300;
 	background-color: #373737;
+	margin: 0;
 }
 
 #content {
-	padding-top: 2em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,19 +17,48 @@ body {
 }
 
 @media screen and (max-width: 42em) {
-	#content {
-		min-height: 80vh;
+	#hero {
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 }
 
 @media screen and (min-width: 42em) {
-	#content {
+	#hero {
+		padding: 2em;
 		min-height: 98vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 }
 
 #hero {
 	text-align: center;
+}
+
+#hero-icon {
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 42em) {
+	#hero-icon {
+		max-width: 25%;
+	}
+	#hero-icon img {
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 42em) {
+	#hero-icon {
+		max-width: 5%;
+	}
+	#hero-icon img {
+		max-width: 100%;
+	}
 }
 
 #hero-text {
@@ -50,6 +80,7 @@ body {
 .title {
 	color: #ffffff;
 	line-height: 1em;
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 42em) {
@@ -66,19 +97,19 @@ body {
 
 .blurb {
 	color: #afafaf;
-	margin: 2em 2em 2em 2em;
+	padding: 1em 1em 1em 1em;
 }
 
 @media screen and (max-width: 42em) {
 	.blurb {
-		font-size: 0.8em;
+		font-size: 1.1em;
 		margin: auto auto 1em;
 	}
 }
 
 @media screen and (min-width: 42em) {
 	.blurb {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 }
 
@@ -124,8 +155,9 @@ body {
 
 @media screen and (max-width: 42em) {
 	#hero-image {
-		padding: 0.5em;
-		width: 90%;
+/*		padding: 0.5em;
+		width: 90%;*/
+		display: none;
 	}
 }
 
@@ -139,6 +171,136 @@ body {
 #hero-image img {
 	width: 75%;
 	height: auto;
+}
+
+#features {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 100%;
+}
+
+.separator {
+	min-width: 100%;
+}
+
+.separator h2 {
+	color: #ffffff;
+	background-color: #212121;
+	min-width: 100%;
+	text-align: center;
+	padding: 2em 0 2em 0;
+	margin: 0 auto;
+}
+
+.features-content {
+	padding: 2em 0 2em 0;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 42em) {
+	.features-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 42em) {
+	#features img {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 42em) {
+	.img-container {
+		width: 25%;
+	}
+	#features img {
+		display: block;
+		width: 100%;
+	}	
+}
+
+@media screen and (max-width: 42em) {
+	.description {
+		display: inline;
+		margin: 0 auto;
+		text-align: center;
+		max-width: 100%;
+		padding: 2em 0 2em 0;
+	}
+}
+
+@media screen and (min-width: 42em) {
+	.description {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 25%;
+	}
+}
+
+.description-header{
+	color: #ffffff;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 42em) {
+	.description-header {
+		max-width: 90%;
+		padding-top: 2em;
+	}
+}
+
+@media screen and (min-width: 42em) {
+	.description-header {
+		max-width: 75%;
+		text-align: center;
+	}
+}
+
+.description-text {
+	color: #afafaf;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 42em) {
+	.description-text {
+		font-size: 1.1em;
+		max-width: 90%;
+		text-align: center;
+		padding-top: 1em ;
+	}
+}
+
+@media screen and (min-width: 42em) {
+	.description-text {
+		font-size: 1.1em;
+		text-align: center;
+		max-width: 75%;
+		padding: 2em 2em 2em 2em;
+	}
+}
+
+#main-menu,
+#clue-explanation,
+#reference {
+	min-width: 100%;
+	background-color: #494949;
+}
+
+@media screen and (min-width: 42em) {
+	#img-quotes-container {
+		order: 2;
+	}
+	#img-related-container {
+		order: 2;
+	}
 }
 
 #footer {
@@ -228,17 +390,22 @@ body {
 	cursor: pointer;
 }
 
+#footer {
+	background-color: #111111;
+}
+
 @media screen and (max-width: 42em) {
 	#footer {
-		display: none;
+		padding: 2em 1em 2em 2em;
+		position: relative;
+		text-align: center;
 	}
 }
 
 @media screen and (min-width: 42em) {
 	#footer {
-		position: fixed;
+		padding: 2em 1em 2em 2em;
+		position: relative;
 		text-align: right;
-		bottom: 1em;
-		right: 1em;
 	}
 }
